@@ -13,7 +13,7 @@ const experience: IExperience.Payload = {
           descriptions: [
             '3D Mesh 기반 도면 생성 자동화 개발',
           ],
-          skillKeywords: ['Linux', 'Python', 'Security', 'Automation'],
+          skillKeywords: ['Linux', 'Python', 'Docker', 'Shapely', 'Git', 'FloorplanReconstruction', '3D Geometry Processing'],
         }
       ],
     },
@@ -21,7 +21,7 @@ const experience: IExperience.Payload = {
       title: '자이언트스텝',
       positions: [
         {
-          title: 'Ai Research Engineer',
+          title: 'AI Research Engineer',
           startedAt: '2025-07',
           endedAt: '2026-03',
           descriptions: [
@@ -30,7 +30,7 @@ const experience: IExperience.Payload = {
             '사내 AI모델 활용을 위한 Playground 서비스 개발: 실무 페인포인트의 AI해결 가능성 검증(PoC), 최적 오픈소스 선정 및 API화',
             '매달 논문 리뷰 및 AI 뉴스레터 작성을 통한 최신 기술 현황 공유'
           ],
-          skillKeywords: ['Linux', 'AWS', 'RDBMS'],
+          skillKeywords: ['Linux', 'PyTorch','PyTorch3D','fastAPI', 'Docker','Git','3D Graphics'],
         },
       ],
     },
