@@ -56,14 +56,14 @@ export default function ExperienceRow({
 
   return (
     <div>
-      {index > 0 && <hr style={{ margin: '0.5 rem 0' }}/>}
+      {index > 0 && <hr style={{ margin: '0.5 rem 0' }} />}
       {/* 최상위 Row: 전체 재직 기간과 회사명 표시 */}
       <Row>
         <Col sm={12} md={3} className="text-md-left">
           <h4 style={{ ...Style.gray, fontSize: '16px' }}>{periodTitle}</h4>
         </Col>
         <Col sm={12} md={9}>
-          <h4 style={{alignItems: 'center' ,fontSize: '16px'}}>
+          <h4 style={{ alignItems: 'center', fontSize: '16px' }}>
             {item.title}{' '}
             <span style={{ fontSize: '70%', display: 'inline-flex', alignItems: 'center' }}>
               {isCurrentlyEmployed && (
@@ -85,13 +85,13 @@ export default function ExperienceRow({
           <Col sm={12} md={3} className="text-md-right">
             {/* positions가 1개 이상일 때만 Position의 재직 기간 표시 */}
             {hasMultiplePositions && (
-              <span style={{...Style.gray, fontSize: '16px' }}>
+              <span style={{ ...Style.gray, fontSize: '16px' }}>
                 {createWorkingPeriod(position.startedAtDate, position.endedAtDate)}
               </span>
             )}
           </Col>
           <Col sm={12} md={9}>
-            <i style={{...Style.gray, fontSize: '16px' }}>{position.title}</i>
+            <i style={{ ...Style.gray, fontSize: '16px' }}>{position.title}</i>
             <ul className="pt-0" style={{ marginLeft: 20, paddingLeft: 0 }}>
               {position.descriptions.map((description, descIndex) => (
                 <li key={descIndex.toString()}>{description}</li>

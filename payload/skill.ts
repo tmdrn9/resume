@@ -4,13 +4,13 @@ const programmingLanguages: ISkill.Skill = {
   category: 'Languages',
   items: [
     {
-      title: 'Python'
+      title: 'Python',
     },
     {
       title: 'C++',
     },
     {
-      title: 'C'
+      title: 'C',
     },
   ],
 };
@@ -19,33 +19,32 @@ const networkSecurity: ISkill.Skill = {
   category: 'Fameworks & Libraries',
   items: [
     {
-      title: 'PyTorch'
+      title: 'PyTorch',
     },
     {
-      title: 'TensorFlow'
+      title: 'TensorFlow',
     },
     {
-      title: 'OpenCV'
+      title: 'OpenCV',
     },
     {
-      title: 'scikit-learn'
+      title: 'scikit-learn',
     },
     {
-      title: 'NumPy'
+      title: 'NumPy',
     },
     {
-      title: 'Pandas'
+      title: 'Pandas',
     },
     {
-      title: 'PyTorch3D'
+      title: 'PyTorch3D',
     },
     {
-      title: 'Shapely'
+      title: 'Shapely',
     },
     {
-      title: 'Matplotlib'
+      title: 'Matplotlib',
     },
-
   ],
 };
 
@@ -56,7 +55,7 @@ const misc: ISkill.Skill = {
       title: 'Git',
     },
     {
-      title: "Docker",
+      title: 'Docker',
     },
     {
       title: 'Linux (Ubuntu)',
@@ -79,17 +78,12 @@ const misc: ISkill.Skill = {
     {
       title: 'Jira/Confluence',
     },
-
   ],
 };
 
 const skill: ISkill.Payload = {
   disable: false,
-  skills: [
-    programmingLanguages,
-    networkSecurity,
-    misc,
-  ]
+  skills: [programmingLanguages, networkSecurity, misc],
 };
 
 export default skill;

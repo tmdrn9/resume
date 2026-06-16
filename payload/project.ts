@@ -17,19 +17,16 @@ const project: IProject.Payload = {
       where: WHERE.NVL,
       descriptions: [
         {
-          content:
-            '수작업 도면 생성 프로세스를 자동화하여 검수 중심 Workflow 구축',
+          content: '수작업 도면 생성 프로세스를 자동화하여 검수 중심 Workflow 구축',
           descriptions: [
             { content: 'Mesh 기반 BEV 생성 및 데이터 구축 파이프라인 개발' },
             { content: 'Room Polygon 및 Door Prediction 모델 설계·학습·평가' },
             { content: 'Room Boundary Prior 기반 Door Prediction 구조 설계' },
             { content: 'Geometry 기반 후처리 알고리즘 개발' },
-
           ],
         },
         {
-          content:
-            '건당 수천 원 수준의 작업 비용 및 작업 시간 절감 기반 구축',
+          content: '건당 수천 원 수준의 작업 비용 및 작업 시간 절감 기반 구축',
         },
       ],
     },
@@ -48,8 +45,7 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content:
-            'Blender 기반 자동 Scene 생성 PoC 구현 및 실무 적용 가능성 검증',
+          content: 'Blender 기반 자동 Scene 생성 PoC 구현 및 실무 적용 가능성 검증',
         },
       ],
     },
@@ -68,8 +64,7 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content:
-            '사내 웹 서비스로 배포 및 운영',
+          content: '사내 웹 서비스로 배포 및 운영',
         },
       ],
     },
@@ -80,8 +75,7 @@ const project: IProject.Payload = {
       where: WHERE.GS,
       descriptions: [
         {
-          content:
-            '현업 부서의 업무 효율화를 위한 AI Playground 서비스 설계·개발',
+          content: '현업 부서의 업무 효율화를 위한 AI Playground 서비스 설계·개발',
           descriptions: [
             { content: '현업 인터뷰를 통한 요구사항 정의 및 문제 발굴' },
             { content: 'Generative AI 오픈소스 모델 조사 및 PoC 수행' },
@@ -89,8 +83,7 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content:
-            '최신 AI 기술 현황을 공유하는 사내 뉴스레터 정기 발행',
+          content: '최신 AI 기술 현황을 공유하는 사내 뉴스레터 정기 발행',
         },
       ],
     },
@@ -101,11 +94,16 @@ const project: IProject.Payload = {
       where: WHERE.MMC,
       descriptions: [
         {
-          content:
-            'NeRF 기반 모달리티 변환 환경에서 강인한 3D 워터마킹 모델 설계·개발',
+          content: 'NeRF 기반 모달리티 변환 환경에서 강인한 3D 워터마킹 모델 설계·개발',
           descriptions: [
-            { content: '3D Texture, Rendering Image, NeRF Output 간 모달리티 차이를 고려한 워터마킹 삽입·추출 구조 설계' },
-            { content: 'NeRF 학습 및 렌더링 과정에서 발생하는 모달리티 변환에도 강인한 독립 Decoder 기반 워터마킹 모델 개발' },
+            {
+              content:
+                '3D Texture, Rendering Image, NeRF Output 간 모달리티 차이를 고려한 워터마킹 삽입·추출 구조 설계',
+            },
+            {
+              content:
+                'NeRF 학습 및 렌더링 과정에서 발생하는 모달리티 변환에도 강인한 독립 Decoder 기반 워터마킹 모델 개발',
+            },
             { content: '워터마크 추출 성능 및 이미지 품질 Trade-off 분석' },
           ],
         },
@@ -126,12 +124,14 @@ const project: IProject.Payload = {
             'Diffusion Inpainting으로 생성된 이미지 조작 영역을 픽셀 단위로 탐지하는 Localization 모델 개발',
           descriptions: [
             { content: 'COCO 기반 약 3만 장 규모의 Diffusion Inpainting 조작 데이터셋 구축' },
-            { content: 'Frequency Feature 기반 Inter-Intra Similarity 모듈을 설계하여 조작 영역 탐지 성능 개선' },
+            {
+              content:
+                'Frequency Feature 기반 Inter-Intra Similarity 모듈을 설계하여 조작 영역 탐지 성능 개선',
+            },
           ],
         },
         {
-          content:
-            'Image and Vision Computing [Q1, JCR 18.1%] 논문 게재',
+          content: 'Image and Vision Computing [Q1, JCR 18.1%] 논문 게재',
         },
       ],
     },
@@ -150,8 +150,7 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content:
-            'Computer Methods and Programs in Biomedicine [SCI(E) JCR top 13%] 에 게재',
+          content: 'Computer Methods and Programs in Biomedicine [SCI(E) JCR top 13%] 에 게재',
         },
       ],
     },
@@ -162,16 +161,14 @@ const project: IProject.Payload = {
       where: WHERE.MMC,
       descriptions: [
         {
-          content:
-            '초음파 의료기기 불량 진단을 위한 CNN 기반 다중 분류 모델 설계·개발',
+          content: '초음파 의료기기 불량 진단을 위한 CNN 기반 다중 분류 모델 설계·개발',
           descriptions: [
             { content: '라벨링 기준 표준화 및 데이터 재수집·정제' },
             { content: 'CNN 기반 2단계 계층적 분류 구조 적용' },
           ],
         },
         {
-          content:
-            '정확도 30% 이상 향상 및 기존 수작업 검사 공정의 진단 효율 개선',
+          content: '정확도 30% 이상 향상 및 기존 수작업 검사 공정의 진단 효율 개선',
         },
       ],
     },
@@ -182,20 +179,17 @@ const project: IProject.Payload = {
       where: WHERE.preMMC,
       descriptions: [
         {
-          content:
-            '복강경 수술 영상 기반 실시간 총담관 탐지 모델 설계·개발',
+          content: '복강경 수술 영상 기반 실시간 총담관 탐지 모델 설계·개발',
           descriptions: [
             { content: '의료 도메인 특성을 반영한 데이터 증강 전략 재설계' },
             { content: '부적합한 증강 기법 제거 및 학습 전략 개선' },
           ],
         },
         {
-          content:
-            '초기 모델 대비 AP Score 18.35% 향상',
+          content: '초기 모델 대비 AP Score 18.35% 향상',
         },
         {
-          content:
-            'Videosurgery and other Miniinvasive Techniques논문 게재',
+          content: 'Videosurgery and other Miniinvasive Techniques논문 게재',
         },
       ],
     },
@@ -206,16 +200,14 @@ const project: IProject.Payload = {
       where: WHERE.preMMC,
       descriptions: [
         {
-          content:
-            '의료 데이터 불균형 완화를 위한 Pix2Pix 기반 데이터 증강 파이프라인 설계·개발',
+          content: '의료 데이터 불균형 완화를 위한 Pix2Pix 기반 데이터 증강 파이프라인 설계·개발',
           descriptions: [
             { content: '암 클래스 대상 합성 데이터 자동 생성' },
             { content: '기존 라벨 재활용 기반 데이터 증강 파이프라인 구축' },
           ],
         },
         {
-          content:
-            '한국 정보처리 학회논문 게재 및 우수논문상 수상',
+          content: '한국 정보처리 학회논문 게재 및 우수논문상 수상',
         },
       ],
     },
