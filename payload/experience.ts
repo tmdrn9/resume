@@ -5,45 +5,47 @@ const experience: IExperience.Payload = {
   disableTotalPeriod: false,
   list: [
     {
-      title: 'Linux Foundation',
+      title: '네이버랩스 (NAVER LABS)',
       positions: [
         {
-          title: 'System Engineer',
-          startedAt: '1996-05',
+          title: '3D Vision Research Engineer',
+          startedAt: '2026-04',
           descriptions: [
-            'Steering Kernel patching and updates for various distributions',
-            'Automating deployment and integration processes for Linux servers',
-            'Spearheading initiatives to enhance Linux kernel security',
-            'Collaborating with global developers to coordinate code contributions',
+            '3D Mesh 기반 도면 생성 자동화 개발',
           ],
-          skillKeywords: ['C', 'Linux', 'Kernel', 'Security', 'Automation'],
-        },
+          skillKeywords: ['Linux', 'Python', 'Security', 'Automation'],
+        }
+      ],
+    },
+    {
+      title: '자이언트스텝',
+      positions: [
         {
-          title: 'System Engineer Intern',
-          startedAt: '1996-02',
-          endedAt: '1996-05',
+          title: 'Ai Research Engineer',
+          startedAt: '2025-07',
+          endedAt: '2026-03',
           descriptions: [
-            'Assisted senior engineers in maintaining and updating kernel patches for Linux distributions',
-            'Supported deployment and integration tasks for Linux server environments',
-            'Conducted research on Linux kernel security practices and presented findings to the team',
+            'Generative AI 기반 Agentic 3D Scene Generation 기술 조사 및 연구',
+            '사내 AI 에셋 검색 플랫폼의 초기 개발 단계부터 참여하여, 배포까지 전 과정 수행',
+            '사내 AI모델 활용을 위한 Playground 서비스 개발: 실무 페인포인트의 AI해결 가능성 검증(PoC), 최적 오픈소스 선정 및 API화',
+            '매달 논문 리뷰 및 AI 뉴스레터 작성을 통한 최신 기술 현황 공유'
           ],
-          skillKeywords: ['C', 'Linux', 'Kernel', 'Support', 'Research'],
+          skillKeywords: ['Linux', 'AWS', 'RDBMS'],
         },
       ],
     },
     {
-      title: 'Open Source Community',
+      title: '삼성 메디슨',
       positions: [
         {
-          title: 'System Advocate and Developer',
-          startedAt: '2010-06',
-          endedAt: '2018-01',
+          title: 'Vision Engineer',
+          startedAt: '2022-01',
+          endedAt: '2022-06',
           descriptions: [
-            'Promoted the use and development of Linux globally.',
-            'Developed automated scripts to streamline system configuration.',
-            'Facilitated live patching systems, reducing downtime.',
+            '초음파 의료기기 불량 검출 AI 개발 및 검증',
+            '최신 연구 트렌드 분석을 위한 논문 리뷰 및 내부 세미나 진행',
           ],
-          skillKeywords: ['Open Source', 'Linux', 'AWS', 'RDBMS'],
+          skillKeywords: ['Git', 'DIGITS', 'Caffe'],
         },
       ],
     },

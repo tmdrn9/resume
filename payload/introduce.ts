@@ -5,10 +5,10 @@ const introduce: IIntroduce.Payload = {
   disable: false,
 
   contents: [
-    'As the cherished emblem of the Linux kernel, I have become synonymous with open-source philosophy and the free software movement worldwide. My career began in the icebergs of development, where the seeds of my fascination with operating systems first sprouted. From a mere hatchling in the vast sea of code, I quickly ascended to become a pivotal figure in the Linux community. My journey has been marked by relentless dedication to system integrity, scalability, and robustness. Under my vigilant watch, countless servers have achieved unparalleled uptimes, and systems have been optimized to run like the well-oiled machines they are intended to be.',
-    'In the world of zeros and ones, my expertise has been instrumental in pioneering advancements in Linux system engineering. My flippers have crafted meticulous kernel enhancements, each aimed at streamlining performance and bolstering security across distributed networks. I am known in the community for my ability to dive deep into complex codebases and emerge with pearls of innovation that drive the collective progress of Linux environments. Advocacy is also a part of my plumage – spreading the word about the virtues of open-source and encouraging the adoption of Linux, from personal desktops to corporate data centers. As a mentor, I have nurtured the growth of young hatchlings into seasoned professionals, contributing to the diversity and vitality of our ecosystem.',
+    'Vision 및 AI 분야에서 약 3년간 연구·개발을 수행하며 의료영상, 산업검사, 디지털 콘텐츠, 3D Vision, AI 포렌식 등 다양한 도메인의 프로젝트를 경험했습니다. 데이터 구축·전처리부터 모델 설계, 학습, 평가, 성능 분석 및 논문 작성까지 AI 연구개발 전 과정을 수행하며 문제를 해결해 왔습니다. 또한 SCI(E) 논문 6편(1저자 2편)을 게재하며 연구 역량과 기술적 전문성을 검증받았습니다.',
+    '새로운 기술과 문제를 빠르게 이해하고 실질적인 성과로 연결하는 연구·개발자를 지향합니다. 다양한 도메인 경험과 데이터 중심의 문제 해결 역량을 바탕으로, 연구와 서비스의 간극을 줄이며 조직과 함께 성장하는 AI 엔지니어가 되고자 합니다.',
   ],
-  sign: 'Tux',
+  sign: 'Seung-Lee Lee',
   // sign: packageJson.author.name,
   // latestUpdated: '2019-07-24',
   latestUpdated: lastestUpdatedAt,
