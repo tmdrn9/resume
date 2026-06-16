@@ -16,17 +16,17 @@ export function CommonRows({
     <div>
       {index > 0 ? <hr /> : ''}
       <Row>
-        <Col sm={12} md={3} className="text-md-right">
+        <Col sm={12} md={3} className="text-md-left" style={{ paddingRight: '0.5rem' }}>
           <Row>
             <Col md={12}>
-              <h4 style={Style.gray}>{left.title}</h4>
+              <h4 style={{ ...Style.gray, fontSize: '16px' }}>{left.title}</h4>
             </Col>
             {left.subTitle ? <Col md={12}>{left.subTitle}</Col> : ''}
           </Row>
         </Col>
         <Col sm={12} md={9}>
-          {right.title ? <h4>{right.title}</h4> : ''}
-          {right.subTitle ? <i style={Style.gray}>{right.subTitle}</i> : ''}
+          {right.title ? <h4 style={{fontSize: '16px' }}>{right.title}</h4> : ''}
+          {right.subTitle ? <i style={{...Style.gray, fontSize: '16px' }}>{right.subTitle}</i> : ''}
           {right.descriptions ? (
             <CommonDescription
               descriptions={right.descriptions}

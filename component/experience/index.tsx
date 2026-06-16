@@ -26,7 +26,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
       return '';
     }
     return (
-      <span style={{ fontSize: '50%' }}>
+      <span style={{ fontSize: '70%' }}>
         <Badge>{getFormattingExperienceTotalDuration(payload)}</Badge>
       </span>
     );
@@ -37,7 +37,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
       <EmptyRowCol>
         <Row className="pb-3">
           <Col>
-            <h2 style={Style.blue}>EXPERIENCE {totalPeriod()}</h2>
+            <h2 style={{ ...Style.blue, fontSize: '22px' }}>EXPERIENCE {totalPeriod()}</h2>
           </Col>
         </Row>
         {payload.list.map((item, index) => (

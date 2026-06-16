@@ -56,16 +56,16 @@ export default function ExperienceRow({
 
   return (
     <div>
-      {index > 0 && <hr />}
+      {index > 0 && <hr style={{ margin: '0.5 rem 0' }}/>}
       {/* 최상위 Row: 전체 재직 기간과 회사명 표시 */}
       <Row>
-        <Col sm={12} md={3} className="text-md-right">
-          <h4 style={Style.gray}>{periodTitle}</h4>
+        <Col sm={12} md={3} className="text-md-left">
+          <h4 style={{ ...Style.gray, fontSize: '16px' }}>{periodTitle}</h4>
         </Col>
         <Col sm={12} md={9}>
-          <h4 style={{ display: 'inline-flex', alignItems: 'center' }}>
+          <h4 style={{alignItems: 'center' ,fontSize: '16px'}}>
             {item.title}{' '}
-            <span style={{ fontSize: '65%', display: 'inline-flex', alignItems: 'center' }}>
+            <span style={{ fontSize: '70%', display: 'inline-flex', alignItems: 'center' }}>
               {isCurrentlyEmployed && (
                 <Badge color="primary" className="ml-1">
                   재직 중
@@ -81,18 +81,18 @@ export default function ExperienceRow({
 
       {/* 각 Position을 최신 순으로 반복하여 개별 재직 기간과 직책 표시 */}
       {sortedPositions.map((position, posIndex) => (
-        <Row key={posIndex.toString()} className="mt-2">
+        <Row key={posIndex.toString()} className="mt-0">
           <Col sm={12} md={3} className="text-md-right">
             {/* positions가 1개 이상일 때만 Position의 재직 기간 표시 */}
             {hasMultiplePositions && (
-              <span style={Style.gray}>
+              <span style={{...Style.gray, fontSize: '16px' }}>
                 {createWorkingPeriod(position.startedAtDate, position.endedAtDate)}
               </span>
             )}
           </Col>
           <Col sm={12} md={9}>
-            <i style={Style.gray}>{position.title}</i>
-            <ul className="pt-2">
+            <i style={{...Style.gray, fontSize: '16px' }}>{position.title}</i>
+            <ul className="pt-0" style={{ marginLeft: 20, paddingLeft: 0 }}>
               {position.descriptions.map((description, descIndex) => (
                 <li key={descIndex.toString()}>{description}</li>
               ))}
