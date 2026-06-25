@@ -31,13 +31,13 @@ function Yosume() {
         <div className="resume-container">
           <Profile.Component payload={Payload.profile} />
           <Introduce.Component payload={Payload.introduce} />
-          <Skill.Component payload={Payload.skill} />
           <Experience.Component payload={Payload.experience} />
           <Article.Component payload={Payload.article} />
           <Project.Component payload={Payload.project} />
           <SideProject.Component payload={Payload.sideProject} />
           {/* <OpenSource.Component payload={Payload.openSource} /> */}
           {/* <Presentation.Component payload={Payload.presentation} /> */}
+          <Skill.Component payload={Payload.skill} />
           <Education.Component payload={Payload.education} />
           {/* <Etc.Component payload={Payload.etc} /> */}
           <Footer.Component payload={Payload.footer} />

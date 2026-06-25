@@ -152,7 +152,7 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content: 'Computer Methods and Programs in Biomedicine [SCI(E) JCR top 13%] 에 게재',
+          content: 'Computer Methods and Programs in Biomedicine [SCI(E) JCR top 13%] 논문 게재',
         },
       ],
     },
@@ -191,7 +191,7 @@ const project: IProject.Payload = {
           content: '초기 모델 대비 AP Score 18.35% 향상',
         },
         {
-          content: 'Videosurgery and other Miniinvasive Techniques논문 게재',
+          content: 'Videosurgery and other Miniinvasive Techniques 논문 게재',
         },
       ],
     },
@@ -209,7 +209,7 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content: '한국 정보처리 학회논문 게재 및 우수논문상 수상',
+          content: '한국 정보처리 학회 논문 게재 및 우수논문상 수상',
         },
       ],
     },
