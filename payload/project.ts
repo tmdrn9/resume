@@ -15,6 +15,7 @@ const project: IProject.Payload = {
     {
       title: '3D Mesh 기반 도면 생성 자동화 개발',
       startedAt: '2026-04',
+      endedAt: '2026-06',
       where: WHERE.NVL,
       descriptions: [
         {

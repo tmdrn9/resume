@@ -10,6 +10,7 @@ import { Introduce } from '../component/introduce';
 // import { Presentation } from '../component/presentation';
 import { Profile } from '../component/profile';
 import { Project } from '../component/project';
+import { SideProject } from '../component/sideProject';
 import { Skill } from '../component/skill';
 import { PrintButton } from '../component/common/PrintButton';
 import { FloatingNav } from '../component/nav/FloatingNav';
@@ -34,6 +35,7 @@ function Yosume() {
           <Experience.Component payload={Payload.experience} />
           <Article.Component payload={Payload.article} />
           <Project.Component payload={Payload.project} />
+          <SideProject.Component payload={Payload.sideProject} />
           {/* <OpenSource.Component payload={Payload.openSource} /> */}
           {/* <Presentation.Component payload={Payload.presentation} /> */}
           <Education.Component payload={Payload.education} />
