@@ -1,4 +1,4 @@
-import { Row, Col, Tooltip } from 'reactstrap';
+import { Tooltip } from 'reactstrap';
 import { PropsWithChildren, useState } from 'react';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

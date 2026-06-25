@@ -1,12 +1,14 @@
-import { PropsWithChildren, useEffect, useRef, useState } from 'react';
+import { CSSProperties, PropsWithChildren, useEffect, useRef, useState } from 'react';
 
-export function SectionAnimate({ children }: PropsWithChildren) {
+export function SectionAnimate({ children }: PropsWithChildren<{}>) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el) {
+      return undefined;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -15,14 +17,14 @@ export function SectionAnimate({ children }: PropsWithChildren) {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
-  const style: React.CSSProperties = {
+  const style: CSSProperties = {
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? 'none' : 'translateY(12px)',
     transition: 'opacity var(--transition-enter), transform var(--transition-enter)',

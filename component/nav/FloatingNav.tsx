@@ -46,7 +46,7 @@ export function FloatingNav() {
       const passed: { id: string; top: number }[] = [];
 
       headings.forEach((heading) => {
-        const top = heading.getBoundingClientRect().top;
+        const { top } = heading.getBoundingClientRect();
         if (top <= activationTop) {
           passed.push({ id: heading.id, top });
         }
@@ -123,6 +123,7 @@ export function FloatingNav() {
           return (
             <li key={item.id} className="floating-nav-item">
               <button
+                type="button"
                 onClick={() => handleClick(item.id)}
                 className={`floating-nav-button ${isActive ? 'is-active' : ''}`}
               >

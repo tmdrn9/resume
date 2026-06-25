@@ -1,13 +1,11 @@
-import { Badge, Col, Row } from 'reactstrap';
+import { Badge } from 'reactstrap';
 import { DateTime, Duration } from 'luxon';
 
 import { PropsWithChildren } from 'react';
 import { CommonSection } from '../common/CommonSection';
-import { EmptyRowCol } from '../common';
 import ExperienceRow from './row';
 import { IExperience } from './IExperience';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
-import { Style } from '../common/Style';
 import Util from '../common/Util';
 
 type Payload = IExperience.Payload;
