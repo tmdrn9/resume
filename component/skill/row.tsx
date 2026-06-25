@@ -26,8 +26,8 @@ export default function SkillRow({
     <div>
       {index > 0 ? <hr /> : ''}
       <Row>
-        <Col sm={12} md={3} className="text-md-right">
-          <h4 style={{ ...Style.gray, fontSize: '18px' }}>{skill.category}</h4>
+        <Col sm={12} md={3} className="text-md-left">
+          <h4 style={{ ...Style.gray, fontSize: '16px' }}>{skill.category}</h4>
         </Col>
         <Col sm={12} md={9}>
           {/* {skill.items.map((item) => JSON.stringify(item, null, 2))} */}
