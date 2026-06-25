@@ -193,7 +193,7 @@
 
   .resume-container {
     max-width: 100% !important;
-    padding: 0 15px !important;
+    padding: 0 !important;
   }
 
   .row {
@@ -342,7 +342,6 @@
   /* 9. 페이지 분할 제어 */
   .experience-item,
   .project-item,
-  .common-row-item,
   .testimonial-card,
   .pullquote,
   .highlight-card,
@@ -355,9 +354,7 @@
   .section-heading {
     break-after: avoid;
   }
-  section {
-    break-before: auto;
-  }
+  section,
 
   /* 10. A4 레이아웃 */
   @page {
