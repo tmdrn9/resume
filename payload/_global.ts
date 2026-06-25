@@ -3,7 +3,7 @@ import previewImage from '../asset/preview.jpg';
 import { IGlobal } from '../component/common/IGlobal';
 
 const title = 'Resume;Seung-Lee Lee';
-const description = 'This is a simple web resume sample.';
+const description = 'This is a Seung-Lee Lee resume website.';
 
 export const _global: IGlobal.Payload = {
   favicon,

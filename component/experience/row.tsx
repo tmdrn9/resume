@@ -65,9 +65,9 @@ export default function ExperienceRow({
         <Col sm={12} md={9}>
           <h4 style={{ alignItems: 'center', fontSize: '16px' }}>
             {item.title}{' '}
-            <span style={{ fontSize: '70%', display: 'inline-flex', alignItems: 'center' }}>
+            <span style={{ fontSize: '90%', display: 'inline-flex', alignItems: 'center' }}>
               {isCurrentlyEmployed && (
-                <Badge color="primary" className="ml-1">
+                <Badge color="primary" className="ml-1 badge-current">
                   재직 중
                 </Badge>
               )}

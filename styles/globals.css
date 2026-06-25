@@ -113,6 +113,34 @@
   color: #0d6efd;
 }
 
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  border: 1px solid #3c78d8;
+  border-radius: 0.25rem;
+  background-color: transparent !important;
+  color: #3c78d8 !important;
+  font-weight: 400;
+}
+
+.badge-primary,
+.badge-info,
+.badge-secondary,
+.badge-light {
+  border-color: #3c78d8 !important;
+  background-color: transparent !important;
+  color: #3c78d8 !important;
+}
+
+.badge-pill {
+  border-radius: 10rem;
+}
+
+.badge-current {
+  border-color: #FFB300 !important;
+  color: #FFB300 !important;
+}
+
 /* === Print styles === */
 @media print {
   /* 1. 인터랙티브 요소 숨김 */
@@ -397,38 +425,45 @@
     display: inline-block !important;
     padding: 0.25em 0.5em !important;
     border-radius: 0.25rem !important;
-    border: 1px solid transparent !important;
+    border: 1px solid #3c78d8 !important;
     font-weight: 400 !important;
+    background-color: transparent !important;
+    color: #3c78d8 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
   .badge-primary {
-    color: #fff !important;
-    background-color: #007bff !important;
-    border-color: #007bff !important;
+    color: #3c78d8 !important;
+    background-color: transparent !important;
+    border-color: #3c78d8 !important;
   }
 
   .badge-info {
-    color: #fff !important;
-    background-color: #17a2b8 !important;
-    border-color: #17a2b8 !important;
+    color: #3c78d8 !important;
+    background-color: transparent !important;
+    border-color: #3c78d8 !important;
   }
 
   .badge-secondary {
-    color: #fff !important;
-    background-color: #6c757d !important;
-    border-color: #6c757d !important;
+    color: #3c78d8 !important;
+    background-color: transparent !important;
+    border-color: #3c78d8 !important;
   }
 
   .badge-light {
-    color: #212529 !important;
-    background-color: #f8f9fa !important;
-    border-color: #d7dce2 !important;
+    color: #3c78d8 !important;
+    background-color: transparent !important;
+    border-color: #3c78d8 !important;
   }
 
   .badge-pill {
     border-radius: 10rem !important;
+  }
+
+  .badge-current {
+    border-color: #febd1a !important;
+    color: #febd1a !important;
   }
 
   .col-md-4 {
