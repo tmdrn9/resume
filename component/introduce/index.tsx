@@ -1,6 +1,8 @@
 import { Row, Col, Badge } from 'reactstrap';
 import { PropsWithChildren } from 'react';
 import { DateTime } from 'luxon';
+import { CommonSection } from '../common/CommonSection';
+import { EmptyRowCol } from '../common';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
 import { IIntroduce } from './IIntroduce';
@@ -27,28 +29,30 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   );
 
   return (
-    <div className="mt-5">
-      <Row>
-        <Col sm={12} md={3}>
-          <h2 style={{ ...Style.blue, fontSize: '22px' }}>INTRODUCE</h2>
-        </Col>
-        <Col sm={12} md={9}>
-          {payload.contents.map((content, index) => (
-            <p key={index.toString()}>{content}</p>
-          ))}
-          <p className="text-right">
-            <small>Latest Updated</small>{' '}
-            <Badge color="secondary">
-              {`${latestUpdated.toFormat(
-                Util.LUXON_DATE_FORMAT.YYYY_DOT_LL_DOT_DD,
-              )} (D+${latestUpdatedByNow})`}
-            </Badge>
-          </p>
-          <p className="text-right" style={Style.sign}>
-            {payload.sign}
-          </p>
-        </Col>
-      </Row>
-    </div>
+    <CommonSection title="INTRODUCE" hideTitle>
+      <EmptyRowCol>
+        <Row className="split-row">
+          <Col sm={12} md={3} className="split-left">
+            <h3 style={{ ...Style.blue, fontSize: '22px' }}>INTRODUCE</h3>
+          </Col>
+          <Col sm={12} md={9} className="split-right">
+            {payload.contents.map((content, index) => (
+              <p key={index.toString()}>{content}</p>
+            ))}
+            <p className="text-right">
+              <small>Latest Updated</small>{' '}
+              <Badge color="secondary">
+                {`${latestUpdated.toFormat(
+                  Util.LUXON_DATE_FORMAT.YYYY_DOT_LL_DOT_DD,
+                )} (D+${latestUpdatedByNow})`}
+              </Badge>
+            </p>
+            <p className="text-right" style={Style.sign}>
+              {payload.sign}
+            </p>
+          </Col>
+        </Row>
+      </EmptyRowCol>
+    </CommonSection>
   );
 }

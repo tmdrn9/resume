@@ -1,0 +1,496 @@
+/* === Show More === */
+.show-more-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.show-more-content {
+  position: relative;
+}
+
+.show-more-content--clipped {
+  overflow: hidden;
+}
+
+.show-more-gradient {
+  position: absolute;
+  right: 0;
+  bottom: 56px;
+  left: 0;
+  height: 104px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff 78%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.show-more-toggle-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+  padding-top: 0.25rem;
+  background: #ffffff;
+}
+
+.show-more-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  padding: 0.55rem 1rem;
+  background: #ffffff;
+  border: 1px solid #d7dce2;
+  border-radius: 999px;
+  color: #495057;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.show-more-toggle:hover {
+  border-color: #0d6efd;
+  color: #0d6efd;
+  box-shadow: 0 12px 24px rgba(13, 110, 253, 0.16);
+  transform: translateY(-1px);
+}
+
+.resume-container {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+@media screen and (max-width: 767px) {
+  .resume-container {
+    padding: 0 16px;
+  }
+}
+
+.profile-section {
+  margin-top: 88px;
+}
+
+.editorial-section {
+  break-inside: avoid-page;
+}
+
+.common-row-item,
+.project-item,
+.experience-item {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+.section-animate {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+.print-button {
+  position: fixed;
+  bottom: 74px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid #d7dce2;
+  background: #ffffff;
+  color: #212529;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  z-index: 99;
+}
+
+.print-button:hover {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+/* === Print styles === */
+@media print {
+  /* 1. 인터랙티브 요소 숨김 */
+  .floating-nav,
+  .cta-button,
+  .dark-mode-toggle,
+  .print-button,
+  .notice-banner,
+  .scroll-to-top,
+  .language-toggle,
+  .resume-footer,
+  .print-exclude {
+    display: none !important;
+  }
+
+  /* 2. Show More: 모두 표시, 컨트롤 숨김 */
+  .show-more-content--clipped {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .show-more-gradient,
+  .show-more-toggle {
+    display: none !important;
+  }
+
+  /* 3. 애니메이션/전환 제거 + content-visibility 강제 표시 */
+  .section-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    content-visibility: visible !important;
+    contain-intrinsic-size: auto !important;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+  }
+
+  /* 3. 레이아웃 */
+  body {
+    width: 210mm;
+    margin: 0;
+    padding: 0;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  .resume-container {
+    max-width: 100% !important;
+    padding: 0 15px !important;
+  }
+
+  .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .row > .col,
+  .row > [class*='col-'] {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .col-md-3 {
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+  }
+
+  .col-md-9 {
+    flex: 0 0 75% !important;
+    max-width: 75% !important;
+  }
+
+  .col-md-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .text-md-left {
+    text-align: left !important;
+  }
+
+  .text-md-right {
+    text-align: right !important;
+  }
+
+  h1 {
+    font-family: 'Sora', 'Pretendard', sans-serif;
+    font-size: 20pt;
+  }
+  h2 {
+    font-family: 'Sora', 'Pretendard', sans-serif;
+    font-size: 14pt;
+  }
+  h3 {
+    font-family: 'Sora', 'Pretendard', sans-serif;
+  }
+  h4 {
+    font-size: 11pt;
+  }
+
+  /* 4. 섹션 간격 축소 */
+  .editorial-section,
+  .profile-section {
+    margin-top: 36px !important;
+  }
+
+  /* 5. Grid 레이아웃 A4 대응 (모바일 breakpoint는 screen only로 비활성) */
+  .split-row {
+    display: grid !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    grid-template-columns: 160px 1fr !important;
+  }
+
+  .profile-main-row {
+    display: grid !important;
+    grid-template-columns: 160px 1fr !important;
+    align-items: start !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .profile-main-row > .profile-media-col,
+  .profile-main-row > .profile-body-col,
+  .split-row > .split-left,
+  .split-row > .split-right {
+    max-width: none !important;
+    width: auto !important;
+    flex: none !important;
+  }
+
+  .profile-main-row .profile-image-wrap {
+    text-align: right !important;
+    padding-bottom: 0 !important;
+  }
+
+  .profile-main-row .profile-image {
+    max-height: 160px !important;
+    width: auto !important;
+  }
+
+  .profile-name-row,
+  .profile-contacts-row,
+  .profile-contact-item {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .profile-contact-item .col-auto,
+  .profile-contact-item [class*='col-auto'],
+  .profile-contact-item [class*='col-'] {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    max-width: none !important;
+  }
+  .card-grid-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  /* 6. 카드 스타일 간소화 */
+  .highlight-card,
+  .testimonial-card,
+  .pullquote {
+    border: 1px solid #ddd !important;
+    background: white !important;
+    padding: 12px !important;
+  }
+
+  /* 7. 링크 URL 표시 */
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.8em;
+    color: #666;
+    word-break: break-all;
+  }
+  a[href^='mailto']::after,
+  a[href^='tel']::after,
+  a[href^='#']::after {
+    content: '' !important;
+  }
+  /* 프로필 연락처 링크는 이미 텍스트로 표시되므로 URL 중복 제거 */
+  .profile-contact-item a::after {
+    content: '' !important;
+  }
+
+  /* 8. 외부 이미지 뱃지 숨김 */
+  img[src*='shields.io'],
+  img[src*='badge'],
+  img[src*='img.shields.io'] {
+    display: none !important;
+  }
+
+  /* 9. 페이지 분할 제어 */
+  .experience-item,
+  .project-item,
+  .common-row-item,
+  .testimonial-card,
+  .pullquote,
+  .highlight-card,
+  .split-row {
+    break-inside: avoid;
+  }
+  h2,
+  h3,
+  h4,
+  .section-heading {
+    break-after: avoid;
+  }
+  section {
+    break-before: auto;
+  }
+
+  /* 10. A4 레이아웃 */
+  @page {
+    margin: 15mm;
+    size: A4;
+  }
+
+  /* 11. 다크 모드 강제 해제 */
+  html[data-theme='dark'],
+  html[data-theme='dark'] * {
+    color: #000 !important;
+    background-color: #fff !important;
+    border-color: #ddd !important;
+  }
+
+  /* 12. 다크모드에서도 skill-dot 라이트 색상 복원
+  html[data-theme='dark'] .skill-dot--filled {
+    background: #3b82f6 !important;
+  }
+  html[data-theme='dark'] .skill-dot--empty {
+    background: #cbd5e1 !important;
+  } */
+
+  /* 13. 프로필 사진 인쇄 최적화 — 데스크탑과 동일한 레이아웃 유지 */
+  .profile-image,
+  img[alt*='profile'],
+  img[alt*='Profile'] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 14. accent 색상 유지 */
+  .section-heading {
+    color: #2563eb !important;
+    border-bottom-color: #0f172a !important;
+  }
+  .tag--accent {
+    color: #2563eb !important;
+    border-color: #2563eb !important;
+  }
+
+  /* 15. Skill chip / tag 축소 */
+  .skill-chip-item {
+    padding: 2px 6px !important;
+    min-height: 22px !important;
+  }
+  .skill-chip-title {
+    font-size: 8pt !important;
+  }
+  .skill-dot {
+    width: 6px !important;
+    height: 6px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .tag {
+    font-size: 8pt !important;
+  }
+
+  a[href]::after {
+    content: '' !important;
+  }
+
+  .badge {
+    display: inline-block !important;
+    padding: 0.25em 0.5em !important;
+    border-radius: 0.25rem !important;
+    border: 1px solid transparent !important;
+    font-weight: 400 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .badge-primary {
+    color: #fff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+  }
+
+  .badge-info {
+    color: #fff !important;
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+  }
+
+  .badge-secondary {
+    color: #fff !important;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+  }
+
+  .badge-light {
+    color: #212529 !important;
+    background-color: #f8f9fa !important;
+    border-color: #d7dce2 !important;
+  }
+
+  .badge-pill {
+    border-radius: 10rem !important;
+  }
+
+  .col-md-4 {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/*flaoting nav*/
+
+.floating-nav {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  transition: opacity var(--transition-slow);
+}
+
+.floating-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.floating-nav-item {
+  margin-bottom: var(--space-sm);
+}
+
+.floating-nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 12px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  font-weight: var(--fw-regular);
+  color: var(--color-text-muted);
+  border-right: 2px solid transparent;
+  text-align: right;
+  display: block;
+  width: 100%;
+  max-width: 170px;
+  line-height: 1.45;
+  transition: all var(--transition-fast);
+}
+
+.floating-nav-button:hover,
+.floating-nav-button.is-active {
+  color: var(--color-accent);
+  border-right-color: var(--color-accent);
+}
+
+.floating-nav-button.is-active {
+  font-weight: var(--fw-semibold);
+}

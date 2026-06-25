@@ -7,13 +7,14 @@ import { CommonDescription } from './CommonDescription';
 export function CommonRows({
   index,
   payload,
-}: PropsWithChildren<{ payload: IRow.Payload; index: number }>) {
+  className,
+}: PropsWithChildren<{ payload: IRow.Payload; index: number; className?: string }>) {
   const { left, right } = payload;
 
   const isNeedDescriptionPadding = !!(right.title || right.subTitle);
 
   return (
-    <div>
+    <div className={className}>
       {index > 0 ? <hr /> : ''}
       <Row>
         <Col sm={12} md={3} className="text-md-left" style={{ paddingRight: '0.5rem' }}>
@@ -44,3 +45,7 @@ export function CommonRows({
     </div>
   );
 }
+
+CommonRows.defaultProps = {
+  className: undefined,
+};

@@ -8,7 +8,7 @@ export default function ProfileContact({
   payload,
 }: PropsWithChildren<{ payload: IProfile.Contact }>) {
   return (
-    <Row className="pb-2">
+    <Row className="profile-contact-item pb-2">
       <Col xs={1} className="text-right">
         <FontAwesomeIcon icon={payload.icon} />
       </Col>

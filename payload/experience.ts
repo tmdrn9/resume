@@ -43,6 +43,8 @@ const experience: IExperience.Payload = {
             'fastAPI',
             'Docker',
             'Git',
+            'ffmpeg',
+            'Blender',
             '3D Graphics',
           ],
         },

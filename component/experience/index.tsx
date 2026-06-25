@@ -2,6 +2,7 @@ import { Badge, Col, Row } from 'reactstrap';
 import { DateTime, Duration } from 'luxon';
 
 import { PropsWithChildren } from 'react';
+import { CommonSection } from '../common/CommonSection';
 import { EmptyRowCol } from '../common';
 import ExperienceRow from './row';
 import { IExperience } from './IExperience';
@@ -26,25 +27,18 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
       return '';
     }
     return (
-      <span style={{ fontSize: '70%' }}>
+      <span style={{ fontSize: '65%' }}>
         <Badge>{getFormattingExperienceTotalDuration(payload)}</Badge>
       </span>
     );
   };
 
   return (
-    <div className="mt-5">
-      <EmptyRowCol>
-        <Row className="pb-3">
-          <Col>
-            <h2 style={{ ...Style.blue, fontSize: '22px' }}>EXPERIENCE {totalPeriod()}</h2>
-          </Col>
-        </Row>
-        {payload.list.map((item, index) => (
-          <ExperienceRow key={index.toString()} item={item} index={index} />
-        ))}
-      </EmptyRowCol>
-    </div>
+    <CommonSection title="EXPERIENCE" titleRight={totalPeriod()}>
+      {payload.list.map((item, index) => (
+        <ExperienceRow key={index.toString()} item={item} index={index} />
+      ))}
+    </CommonSection>
   );
 }
 

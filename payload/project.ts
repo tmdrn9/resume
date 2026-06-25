@@ -10,6 +10,7 @@ const WHERE = {
 
 const project: IProject.Payload = {
   disable: false,
+  showMoreCount: 3,
   list: [
     {
       title: '3D Mesh 기반 도면 생성 자동화 개발',

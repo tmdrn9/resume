@@ -55,7 +55,7 @@ export default function ExperienceRow({
   const hasMultiplePositions = sortedPositions.length > 1;
 
   return (
-    <div>
+    <div className="experience-item">
       {index > 0 && <hr style={{ margin: '0.5 rem 0' }} />}
       {/* 최상위 Row: 전체 재직 기간과 회사명 표시 */}
       <Row>

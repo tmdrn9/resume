@@ -2,6 +2,7 @@ import { DateTime } from 'luxon';
 import { PropsWithChildren } from 'react';
 import { CommonRows } from '../common/CommonRow';
 import { IRow } from '../common/IRow';
+import { ShowMoreWrapper } from '../common/ShowMoreWrapper';
 import Util from '../common/Util';
 import { EmptyRowCol } from '../common';
 import { IPresentation } from './IPresentation';
@@ -11,9 +12,18 @@ export default function PresentationRow({
 }: PropsWithChildren<{ payload: IPresentation.Payload }>) {
   return (
     <EmptyRowCol>
-      {payload.list.map((item, index) => {
-        return <CommonRows key={index.toString()} payload={serialize(item)} index={index} />;
-      })}
+      <ShowMoreWrapper showMoreCount={payload.showMoreCount}>
+        {payload.list.map((item, index) => {
+          return (
+            <CommonRows
+              key={index.toString()}
+              payload={serialize(item)}
+              index={index}
+              className="project-item"
+            />
+          );
+        })}
+      </ShowMoreWrapper>
     </EmptyRowCol>
   );
 }

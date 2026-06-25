@@ -4,6 +4,7 @@ import { CommonSection } from '../common/CommonSection';
 import { EmptyRowCol } from '../common';
 import { CommonRows } from '../common/CommonRow';
 import { IRow } from '../common/IRow';
+import { ShowMoreWrapper } from '../common/ShowMoreWrapper';
 import Util from '../common/Util';
 import { IEtc } from './IEtc';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
@@ -31,9 +32,18 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
 function EducationRow({ payload }: PropsWithChildren<{ payload: Payload }>) {
   return (
     <EmptyRowCol>
-      {payload.list.map((item, index) => {
-        return <CommonRows key={index.toString()} payload={serialize(item)} index={index} />;
-      })}
+      <ShowMoreWrapper showMoreCount={payload.showMoreCount}>
+        {payload.list.map((item, index) => {
+          return (
+            <CommonRows
+              key={index.toString()}
+              payload={serialize(item)}
+              index={index}
+              className="common-row-item"
+            />
+          );
+        })}
+      </ShowMoreWrapper>
     </EmptyRowCol>
   );
 }
