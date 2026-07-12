@@ -8,6 +8,7 @@ export declare namespace ISideProject {
 
   export interface Item {
     title: string;
+    websiteHref?: string;
     where: string;
     startedAt: string;
     endedAt?: string;

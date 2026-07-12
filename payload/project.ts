@@ -160,7 +160,7 @@ const project: IProject.Payload = {
       title: '초음파기기 불량품 진단 모델 개발',
       startedAt: '2022-02',
       endedAt: '2022-06',
-      where: WHERE.MMC,
+      where: WHERE.SM,
       descriptions: [
         {
           content: '초음파 의료기기 불량 진단을 위한 CNN 기반 다중 분류 모델 설계·개발',

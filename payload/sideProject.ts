@@ -6,6 +6,7 @@ const sideProject: ISideProject.Payload = {
   list: [
     {
       title: 'Personal Body',
+      websiteHref: 'https://personalbody.co.kr/',
       startedAt: '2025-12',
       endedAt: '2026-04',
       where: 'AI 기반 3D 체형 분석 서비스',

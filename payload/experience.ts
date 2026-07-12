@@ -18,6 +18,7 @@ const experience: IExperience.Payload = {
             'Shapely',
             'Git',
             'FloorplanReconstruction',
+            '3D Reconstruction',
             '3D Geometry Processing',
           ],
         },

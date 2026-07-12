@@ -48,7 +48,21 @@ function serialize(payload: ISideProject.Item): IRow.Payload {
       title,
     },
     right: {
-      title: payload.title,
+      title: payload.websiteHref ? (
+        <span>
+          {payload.title}{' '}
+          <a
+            href={payload.websiteHref}
+            target="_blank"
+            rel="noreferrer"
+            style={{ fontSize: '12px', fontWeight: 400 }}
+          >
+            Website ↗
+          </a>
+        </span>
+      ) : (
+        payload.title
+      ),
       subTitle: payload.where,
       descriptions: payload.descriptions,
     },
