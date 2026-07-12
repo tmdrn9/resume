@@ -1,9 +1,9 @@
 import { IProject } from '../component/project/IProject';
 
 const WHERE = {
-  GS: '자이언트스텝(GIANTSTEP) AI Research Engineer',
-  NVL: '네이버랩스(NAVER Labs) 3D Vision Research Engineer',
-  SM: '삼성메디슨 Vision Engineer',
+  GS: '자이언트스텝 / AI Research Engineer',
+  NVL: '네이버랩스 / 3D Vision Research Engineer',
+  SM: '삼성메디슨 / Vision Engineer',
   MMC: '한림대학교 MMC Lab Master Course',
   preMMC: '한림대학교 MMC Lab Bachelor Course',
 };

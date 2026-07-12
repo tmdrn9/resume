@@ -25,7 +25,7 @@ const experience: IExperience.Payload = {
       ],
     },
     {
-      title: '자이언트스텝',
+      title: '자이언트스텝 (GIANTSTEP)',
       positions: [
         {
           title: 'AI Research Engineer',
