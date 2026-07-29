@@ -61,27 +61,30 @@ function DescriptionRecursion({
 }
 
 function Description({ description }: PropsWithChildren<{ description: IRow.Description }>) {
-  const { content, href, postImage, postHref, weight } = description;
+  const { content, href, postImage, postHref, weight, badge } = description;
+
+  const badgeComponent = badge ? <span className="description-badge">{badge}</span> : null;
 
   const component = (() => {
     if (href && postImage) {
       return (
         <li style={getFontWeight(weight)}>
-          <HrefTargetBlank url={href} text={content} /> <img src={postImage} alt={postImage} />
+          <HrefTargetBlank url={href} text={content} /> {badgeComponent}{' '}
+          <img src={postImage} alt={postImage} />
         </li>
       );
     }
     if (href) {
       return (
         <li style={getFontWeight(weight)}>
-          <HrefTargetBlank url={href} text={content} />
+          <HrefTargetBlank url={href} text={content} /> {badgeComponent}
         </li>
       );
     }
     if (postHref && postImage) {
       return (
         <li style={getFontWeight(weight)}>
-          {content} <HrefTargetBlank url={postHref} text={postHref} />{' '}
+          {content} {badgeComponent} <HrefTargetBlank url={postHref} text={postHref} />{' '}
           <img src={postImage} alt={postImage} />
         </li>
       );
@@ -89,21 +92,23 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
     if (postHref) {
       return (
         <li style={getFontWeight(weight)}>
-          {content} <HrefTargetBlank url={postHref} text={postHref} />
+          {content} {badgeComponent} <HrefTargetBlank url={postHref} text={postHref} />
         </li>
       );
     }
     if (postImage) {
       return (
         <li style={getFontWeight(weight)}>
-          {content} <img src={postImage} alt={postImage} />
+          {content} {badgeComponent} <img src={postImage} alt={postImage} />
         </li>
       );
     }
     return (
       <>
         <meta name="format-detection" content="telephone=no" />
-        <li style={getFontWeight(weight)}>{content}</li>
+        <li style={getFontWeight(weight)}>
+          {content} {badgeComponent}
+        </li>
       </>
     );
   })();
