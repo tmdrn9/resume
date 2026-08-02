@@ -73,9 +73,6 @@
   margin-top: 88px;
 }
 
-.editorial-section {
-  break-inside: avoid-page;
-}
 
 .publication-highlights {
   display: grid;
@@ -337,27 +334,50 @@
   /* 4. 섹션 간격 축소 */
   .editorial-section,
   .profile-section {
-    margin-top: 36px !important;
+    margin-top: 20px !important;
   }
 
-  /* Do not let the Project section box reserve a new page. */
+  /* Let the Project section flow while keeping each project entry intact. */
   .editorial-section[aria-labelledby='section-project'] {
-    display: contents !important;
+    display: block !important;
     break-inside: auto !important;
-    page-break-inside: auto !important;
-  }
-
-  .editorial-section[aria-labelledby='section-project'] .section-heading,
-  .editorial-section[aria-labelledby='section-project'] .project-item {
-    break-after: auto !important;
-    break-inside: auto !important;
-    page-break-after: auto !important;
     page-break-inside: auto !important;
   }
 
   .editorial-section[aria-labelledby='section-project'] .section-heading {
-    margin-right: 20px !important;
-    margin-left: 20px !important;
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+  }
+
+  .project-print-block {
+    display: inline-block !important;
+    width: 100% !important;
+    vertical-align: top !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Side Project alone may continue in the remaining space after Project. */
+  .side-project-section .editorial-section,
+  .side-project-section .side-project-item {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  .side-project-section .section-heading {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  .side-project-section .section-title-content {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  .editorial-section[aria-labelledby='section-publications'] .section-title-content,
+  .editorial-section[aria-labelledby='section-skill'] .section-title-content {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
   }
 
   /* The Introduce title is inside two print-grid columns. Offset their
@@ -456,6 +476,7 @@
   /* 9. 페이지 분할 제어 */
   .experience-item,
   .project-item,
+  .publication-list > li,
   .testimonial-card,
   .pullquote,
   .highlight-card,

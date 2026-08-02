@@ -17,8 +17,10 @@ export const SideProject = {
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   return (
-    <CommonSection title="SIDE PROJECT">
-      <SideProjectRow payload={payload} />
-    </CommonSection>
+    <div className="side-project-section">
+      <CommonSection title="SIDE PROJECT" keepTitleWithChildren>
+        <SideProjectRow payload={payload} />
+      </CommonSection>
+    </div>
   );
 }

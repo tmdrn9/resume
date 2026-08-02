@@ -19,7 +19,7 @@ export default function SideProjectRow({
               key={index.toString()}
               payload={serialize(item)}
               index={index}
-              className="project-item"
+              className="side-project-item"
             />
           );
         })}

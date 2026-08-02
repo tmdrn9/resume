@@ -20,7 +20,7 @@ export const Skill = {
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   return (
-    <CommonSection title="SKILL" titleRight={createTooltip(payload.tooltip)}>
+    <CommonSection title="SKILL" titleRight={createTooltip(payload.tooltip)} keepTitleWithChildren>
       {payload.skills.map((skill, index) => (
         <SkillRow key={index.toString()} skill={skill} index={index} />
       ))}

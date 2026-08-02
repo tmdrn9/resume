@@ -7,11 +7,19 @@ import { IRow } from './IRow';
 export function CommonDescription({
   descriptions,
   option,
-}: PropsWithChildren<{ descriptions: IRow.Description[]; option?: { padding?: boolean } }>) {
+  className,
+}: PropsWithChildren<{
+  descriptions: IRow.Description[];
+  option?: { padding?: boolean };
+  className?: string;
+}>) {
   return (
     <>
       {descriptions ? (
-        <ul className={option?.padding ? 'pt-2' : ''} style={{ marginLeft: 20, paddingLeft: 0 }}>
+        <ul
+          className={[option?.padding && 'pt-2', className].filter(Boolean).join(' ')}
+          style={{ marginLeft: 20, paddingLeft: 0 }}
+        >
           {descriptions.map((description, descIndex) => {
             return (
               <>

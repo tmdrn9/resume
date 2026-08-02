@@ -19,7 +19,7 @@ export const Article = {
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   return (
-    <CommonSection title="PUBLICATIONS">
+    <CommonSection title="PUBLICATIONS" keepTitleWithChildren>
       <div className="publication-highlights" aria-label="Publication highlights">
         <div className="publication-highlight-card">
           <div className="publication-highlight-content">
@@ -55,7 +55,7 @@ function ArticleRow({ payload }: PropsWithChildren<{ payload: Payload }>) {
 
   return (
     <EmptyRowCol>
-      <CommonDescription descriptions={payload.list} />
+      <CommonDescription descriptions={payload.list} className="publication-list" />
     </EmptyRowCol>
   );
 }
