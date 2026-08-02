@@ -33,7 +33,12 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
       <EmptyRowCol>
         <Row className="split-row">
           <Col sm={12} md={3} className="split-left">
-            <h3 style={{ ...Style.blue, fontSize: '22px' }}>INTRODUCE</h3>
+            <h2
+              className="section-heading introduce-heading"
+              style={{ ...Style.blue, fontSize: '22px' }}
+            >
+              INTRODUCE
+            </h2>
           </Col>
           <Col sm={12} md={9} className="split-right">
             {payload.contents.map((content, index) => (

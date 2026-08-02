@@ -355,6 +355,18 @@
     page-break-inside: auto !important;
   }
 
+  .editorial-section[aria-labelledby='section-project'] .section-heading {
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+  }
+
+  /* The Introduce title is inside two print-grid columns. Offset their
+     horizontal padding so it aligns with ordinary section headings. */
+  .introduce-heading {
+    margin-left: -24px !important;
+    color: #2563eb !important;
+  }
+
   /* 5. Grid 레이아웃 A4 대응 (모바일 breakpoint는 screen only로 비활성) */
   .split-row {
     display: grid !important;
