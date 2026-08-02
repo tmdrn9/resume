@@ -340,6 +340,21 @@
     margin-top: 36px !important;
   }
 
+  /* Do not let the Project section box reserve a new page. */
+  .editorial-section[aria-labelledby='section-project'] {
+    display: contents !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  .editorial-section[aria-labelledby='section-project'] .section-heading,
+  .editorial-section[aria-labelledby='section-project'] .project-item {
+    break-after: auto !important;
+    break-inside: auto !important;
+    page-break-after: auto !important;
+    page-break-inside: auto !important;
+  }
+
   /* 5. Grid 레이아웃 A4 대응 (모바일 breakpoint는 screen only로 비활성) */
   .split-row {
     display: grid !important;
@@ -435,6 +450,7 @@
   .split-row {
     break-inside: avoid;
   }
+
   h2,
   h3,
   h4,
