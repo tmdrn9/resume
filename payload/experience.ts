@@ -10,7 +10,10 @@ const experience: IExperience.Payload = {
         {
           title: '3D Vision Research Engineer',
           startedAt: '2026-04',
-          descriptions: ['3D Mesh 기반 도면 생성 자동화 개발'],
+          descriptions: [
+            'ERP 이미지 기반 부동산 실내 공간 3D Reconstruction 및 Mesh Geometry Refinement',
+            '3D Mesh 기반 도면 생성 자동화 개발',
+          ],
           skillKeywords: [
             'Linux',
             'Python',
