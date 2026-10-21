@@ -16,7 +16,7 @@ const programmingLanguages: ISkill.Skill = {
 };
 
 const networkSecurity: ISkill.Skill = {
-  category: 'Fameworks & Libraries',
+  category: 'Frameworks & Libraries',
   items: [
     {
       title: 'PyTorch',
