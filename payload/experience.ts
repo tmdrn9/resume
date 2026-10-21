@@ -12,7 +12,7 @@ const experience: IExperience.Payload = {
           startedAt: '2026-04',
           endedAt: '2026-10',
           descriptions: [
-            '실내 도면 생성 자동화 파이프라인 개발 및 모델 설계·Docker 기반 패키징까지 전 과정 수행',
+            '실내 도면 생성 자동화 파이프라인 개발 및 모델 설계 · Docker기반 패키징까지 전 과정 수행',
             '실내 공간 3D Reconstruction 및 Mesh Geometry Refinement',
             'Semantic Texture Baking 및 재질 교체 시뮬레이션 뷰어 개발',
           ],

@@ -2,8 +2,8 @@ import { IProject } from '../component/project/IProject';
 
 const WHERE = {
   GS: '자이언트스텝 / AI Research Engineer',
-  NVL: '네이버랩스 / 3D Vision Research Engineer',
-  SM: '삼성메디슨 / Vision Engineer',
+  NVL: '네이버랩스 / 3D Vision Research Engineer (Intern)',
+  SM: '삼성메디슨 / Vision Engineer (Intern)',
   MMC: '한림대학교 MMC Lab Master Course',
   preMMC: '한림대학교 MMC Lab Bachelor Course',
 };
@@ -13,22 +13,39 @@ const project: IProject.Payload = {
   showMoreCount: 3,
   list: [
     {
+      title: '실내 3D Mesh Refinement 및 인테리어 시뮬레이션 개발',
+      startedAt: '2026-07',
+      endedAt: '2026-10',
+      where: WHERE.NVL,
+      descriptions: [
+        {
+          content: '실내 3D Reconstructed Mesh의 품질 개선 및 영역별 재질 교체를 지원하는 3D 에셋 생성·시뮬레이션 데모 개발',
+          descriptions: [
+            { content: 'GT가 없는 환경에서 Train-free 방식의 Mesh Refinement 설계' },
+            { content: 'Semantic Texture Baking 및 PBR 생성 API 연동 시뮬레이션 뷰어 개발' },
+          ],
+        },
+        {
+          content: '인테리어 시뮬레이션 고도화를 위한 파이프라인 기반 구축',
+        },
+      ],
+    },
+    {
       title: '3D Mesh 기반 도면 생성 자동화 개발',
       startedAt: '2026-04',
       endedAt: '2026-06',
       where: WHERE.NVL,
       descriptions: [
         {
-          content: '수작업 도면 생성 프로세스를 자동화하여 검수 중심 Workflow 구축',
+          content: '3D 스캔 데이터로부터 실내 평면 도면을 자동 생성하는 파이프라인을 설계·개발',
           descriptions: [
-            { content: 'Mesh 기반 BEV 생성 및 데이터 구축 파이프라인 개발' },
-            { content: 'Room Polygon 및 Door Prediction 모델 설계·학습·평가' },
-            { content: 'Room Boundary Prior 기반 Door Prediction 구조 설계' },
-            { content: 'Geometry 기반 후처리 알고리즘 개발' },
+            { content: 'Density Map기반 BEV 회전 정렬 모델 개발 (MAE 0.55°)' },
+            { content: 'YOLO Segmentation + Transformer Refinement기반 Room Polygon Prediction 및 Door Prediction 모델 개발 (mAP50-95 0.88 / F1 0.96)' },
+            { content: '기존 편집 툴 호환 포맷 및 Docker 기반 단일 명령 실행 환경 구축' },
           ],
         },
         {
-          content: '건당 수천 원 수준의 작업 비용 및 작업 시간 절감 기반 구축',
+          content: '건당 14분의 수작업 작도를 2–3초로 단축해 워크플로우를 검수 중심으로 전환',
         },
       ],
     },
