@@ -19,7 +19,8 @@ const project: IProject.Payload = {
       where: WHERE.NVL,
       descriptions: [
         {
-          content: '실내 3D Reconstructed Mesh의 품질 개선 및 영역별 재질 교체를 지원하는 3D 에셋 생성·시뮬레이션 데모 개발',
+          content:
+            '실내 3D Reconstructed Mesh의 품질 개선 및 영역별 재질 교체를 지원하는 3D 에셋 생성·시뮬레이션 데모 개발',
           descriptions: [
             { content: 'GT가 없는 환경에서 Train-free 방식의 Mesh Refinement 설계' },
             { content: 'Semantic Texture Baking 및 PBR 생성 API 연동 시뮬레이션 뷰어 개발' },
@@ -40,7 +41,10 @@ const project: IProject.Payload = {
           content: '3D 스캔 데이터로부터 실내 평면 도면을 자동 생성하는 파이프라인을 설계·개발',
           descriptions: [
             { content: 'Density Map기반 BEV 회전 정렬 모델 개발 (MAE 0.55°)' },
-            { content: 'YOLO Segmentation + Transformer Refinement기반 Room Polygon Prediction 및 Door Prediction 모델 개발 (mAP50-95 0.88 / F1 0.96)' },
+            {
+              content:
+                'YOLO Segmentation + Transformer Refinement기반 Room Polygon Prediction 및 Door Prediction 모델 개발 (mAP50-95 0.88 / F1 0.96)',
+            },
             { content: '기존 편집 툴 호환 포맷 및 Docker 기반 단일 명령 실행 환경 구축' },
           ],
         },
