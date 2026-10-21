@@ -8,7 +8,7 @@ const experience: IExperience.Payload = {
       title: '네이버랩스 (NAVER LABS)',
       positions: [
         {
-          title: '3D Vision Research Engineer',
+          title: '3D Vision Research Engineer (Intern)',
           startedAt: '2026-04',
           descriptions: [
             'ERP 이미지 기반 부동산 실내 공간 3D Reconstruction 및 Mesh Geometry Refinement',
@@ -58,7 +58,7 @@ const experience: IExperience.Payload = {
       title: '삼성 메디슨',
       positions: [
         {
-          title: 'Vision Engineer',
+          title: 'Vision Engineer (Intern)',
           startedAt: '2022-01',
           endedAt: '2022-06',
           descriptions: [
