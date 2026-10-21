@@ -174,45 +174,6 @@ const project: IProject.Payload = {
         },
       ],
     },
-    {
-      title: '복강경 수술 영상 기반 실시간 총담관 탐지 모델 개발',
-      startedAt: '2021-08',
-      endedAt: '2025-03',
-      where: WHERE.preMMC,
-      descriptions: [
-        {
-          content: '복강경 수술 영상 기반 실시간 총담관 탐지 모델 설계·개발',
-          descriptions: [
-            { content: '의료 도메인 특성을 반영한 데이터 증강 전략 재설계' },
-            { content: '부적합한 증강 기법 제거 및 학습 전략 개선' },
-          ],
-        },
-        {
-          content: '초기 모델 대비 AP Score 18.35% 향상',
-        },
-        {
-          content: 'Videosurgery and other Miniinvasive Techniques 논문 게재',
-        },
-      ],
-    },
-    {
-      title: '의료 데이터 불균형 문제 해결을 위한 GAN 기반 데이터 증강',
-      startedAt: '2021-09',
-      endedAt: '2022-11',
-      where: WHERE.preMMC,
-      descriptions: [
-        {
-          content: '의료 데이터 불균형 완화를 위한 Pix2Pix 기반 데이터 증강 파이프라인 설계·개발',
-          descriptions: [
-            { content: '암 클래스 대상 합성 데이터 자동 생성' },
-            { content: '기존 라벨 재활용 기반 데이터 증강 파이프라인 구축' },
-          ],
-        },
-        {
-          content: '한국 정보처리 학회 논문 게재 및 우수논문상 수상',
-        },
-      ],
-    },
   ],
 };
 
