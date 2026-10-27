@@ -13,16 +13,22 @@ import { LanguageButton } from './common/LanguageButton';
 import { FloatingNav } from './nav/FloatingNav';
 import { Article } from './article';
 import { Payload } from '../payload';
+import { homepage } from '../package.json';
 
 export function ResumePage({
   payload,
   language,
-  languageSwitchHref,
 }: {
   payload: Payload;
   language: 'ko' | 'en';
-  languageSwitchHref: string;
 }) {
+  const targetPath = language === 'ko' ? '' : 'ko';
+  const homepageUrl = new URL(homepage);
+  const isGitHubPages =
+    typeof window !== 'undefined' && window.location.hostname === homepageUrl.hostname;
+  const basePath = isGitHubPages ? homepageUrl.pathname : '';
+  const languageSwitchHref = `${basePath.replace(/\/$/, '')}/${targetPath}`;
+
   return (
     <>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
