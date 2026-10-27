@@ -29,8 +29,9 @@ export const Style: Record<TStyleKey, CSSProperties> = {
   },
 
   sign: {
-    fontFamily: "'Parisienne', cursive",
-    fontSize: '1.5em',
+    fontFamily: 'var(--font-signature)',
+    fontSize: '1.2em',
+    fontWeight: 300,
   },
 
   profileImg: {
