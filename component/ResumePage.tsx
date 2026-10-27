@@ -15,13 +15,7 @@ import { Article } from './article';
 import { Payload } from '../payload';
 import { homepage } from '../package.json';
 
-export function ResumePage({
-  payload,
-  language,
-}: {
-  payload: Payload;
-  language: 'ko' | 'en';
-}) {
+export function ResumePage({ payload, language }: { payload: Payload; language: 'ko' | 'en' }) {
   const targetPath = language === 'ko' ? '' : 'ko';
   const homepageUrl = new URL(homepage);
   const isGitHubPages =
