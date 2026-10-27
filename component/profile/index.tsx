@@ -22,10 +22,12 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   return (
     <div className="profile-section mt-5">
       <Row className="profile-main-row">
-        <Col md={3} sm={12} className="profile-media-col">
-          <ProfileImage src={image} />
-        </Col>
-        <Col md={9} sm={12} className="profile-body-col">
+        {image ? (
+          <Col md={3} sm={12} className="profile-media-col">
+            <ProfileImage src={image} />
+          </Col>
+        ) : null}
+        <Col md={image ? 9 : 12} sm={12} className="profile-body-col">
           {createNameArea(name)}
           {createProfileContactMap(contact)}
         </Col>

@@ -44,7 +44,7 @@ const Payload: Payload = {
   _global,
 };
 
-interface Payload {
+export interface Payload {
   profile: IProfile.Payload;
   introduce: IIntroduce.Payload;
   skill: ISkill.Payload;

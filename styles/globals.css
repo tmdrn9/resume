@@ -73,6 +73,27 @@
   margin-top: 88px;
 }
 
+.language-switch {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.25rem;
+  font-size: 0.85rem;
+}
+
+.language-switch a {
+  color: #495057;
+}
+
+.language-switch a:hover {
+  color: #0d6efd;
+}
+
+@media screen and (max-width: 767px) {
+  .language-switch {
+    right: 1rem;
+  }
+}
+
 
 .publication-highlights {
   display: grid;
