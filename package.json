@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env DEBUG=yosume:* NODE_OPTIONS=--openssl-legacy-provider next",
+    "dev": "cross-env NODE_ENV=development DEBUG=yosume:* NODE_OPTIONS=--openssl-legacy-provider next",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
     "prebuild": "npm install && npm run lint",
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start",

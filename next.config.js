@@ -3,16 +3,28 @@ const withImages = require('next-images');
 const { homepage } = require('./package.json');
 
 const { NODE_ENV } = process.env;
+const basePath = (() => {
+  if (NODE_ENV !== 'production' || !homepage) {
+    return '';
+  }
+  try {
+    return new URL(homepage).pathname.replace(/\/$/, '');
+  } catch {
+    return '';
+  }
+})();
 
 module.exports = withImages({
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   assetPrefix: (() => {
     if (NODE_ENV === 'production' && homepage) {
       try {
         console.log('> Detected homepage url in package.json');
-        const { pathname } = new URL(homepage);
-        if (pathname !== '/') {
-          console.log(`> Apply \'${pathname}\' to assetPrefix(subPath)`);
-          return pathname;
+        if (basePath) {
+          console.log(`> Apply \'${basePath}\' to assetPrefix(subPath)`);
+          return basePath;
         }
         return '';
       } catch {

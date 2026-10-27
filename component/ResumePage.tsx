@@ -13,14 +13,10 @@ import { LanguageButton } from './common/LanguageButton';
 import { FloatingNav } from './nav/FloatingNav';
 import { Article } from './article';
 import { Payload } from '../payload';
-import { homepage } from '../package.json';
 
 export function ResumePage({ payload, language }: { payload: Payload; language: 'ko' | 'en' }) {
   const targetPath = language === 'ko' ? '' : 'ko';
-  const homepageUrl = new URL(homepage);
-  const isGitHubPages =
-    typeof window !== 'undefined' && window.location.hostname === homepageUrl.hostname;
-  const basePath = isGitHubPages ? homepageUrl.pathname : '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   const languageSwitchHref = `${basePath.replace(/\/$/, '')}/${targetPath}`;
 
   return (
