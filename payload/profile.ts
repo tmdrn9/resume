@@ -30,7 +30,8 @@ const profile: IProfile.Payload = {
       icon: faGithub,
     },
     {
-      link: 'https://linkedin.com/in/leeseunglee/',
+      title: '@seunglee',
+      link: 'https://linkedin.com/in/leeseunglee',
       icon: faLinkedin,
     },
   ],
