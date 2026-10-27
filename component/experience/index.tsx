@@ -41,10 +41,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   );
 }
 
-function getFormattingExperienceTotalDuration(
-  payload: IExperience.Payload,
-  language: 'ko' | 'en',
-) {
+function getFormattingExperienceTotalDuration(payload: IExperience.Payload, language: 'ko' | 'en') {
   const durations = payload.list.reduce((acc: Duration[], item: IExperience.Item) => {
     const itemDurations = item.positions.map((position: IExperience.Position) => {
       if (position.includeInTotal === false) {

@@ -111,8 +111,14 @@ const englishPayload: Payload = {
             content:
               'Built a 3D asset-generation and simulation demo that improves reconstructed indoor meshes and supports region-specific material replacement.',
             descriptions: [
-              { content: 'Designed a train-free mesh-refinement approach for settings without ground-truth data.' },
-              { content: 'Built a simulation viewer that integrates semantic texture baking and PBR-generation APIs.' },
+              {
+                content:
+                  'Designed a train-free mesh-refinement approach for settings without ground-truth data.',
+              },
+              {
+                content:
+                  'Built a simulation viewer that integrates semantic texture baking and PBR-generation APIs.',
+              },
             ],
           },
           { content: 'Established the foundation for an extensible interior-simulation pipeline.' },
@@ -125,17 +131,26 @@ const englishPayload: Payload = {
         where: 'NAVER LABS / 3D Vision Research Engineer Intern',
         descriptions: [
           {
-            content: 'Designed and built a pipeline that automatically generates indoor floor plans from reconstructed 3D meshes.',
+            content:
+              'Designed and built a pipeline that automatically generates indoor floor plans from reconstructed 3D meshes.',
             descriptions: [
-              { content: 'Developed density-map-based BEV rotation alignment with an MAE of 0.55°.' },
+              {
+                content: 'Developed density-map-based BEV rotation alignment with an MAE of 0.55°.',
+              },
               {
                 content:
                   'Developed room-polygon and door-prediction models using YOLO segmentation and Transformer refinement (mAP50–95 0.88; F1 0.96).',
               },
-              { content: 'Established an editor-compatible export format and a Docker-based one-command execution environment.' },
+              {
+                content:
+                  'Established an editor-compatible export format and a Docker-based one-command execution environment.',
+              },
             ],
           },
-          { content: 'Reduced manual drafting from 14 minutes per case to 2–3 seconds and shifted the workflow toward review.' },
+          {
+            content:
+              'Reduced manual drafting from 14 minutes per case to 2–3 seconds and shifted the workflow toward review.',
+          },
         ],
       },
       {
@@ -145,13 +160,20 @@ const englishPayload: Payload = {
         where: 'GIANTSTEP / AI Research Engineer',
         descriptions: [
           {
-            content: 'Designed and developed an agentic 3D scene-generation system to automate repetitive scene-composition work.',
+            content:
+              'Designed and developed an agentic 3D scene-generation system to automate repetitive scene-composition work.',
             descriptions: [
-              { content: 'Designed an LLM-based scene-planning and multi-module orchestration architecture.' },
+              {
+                content:
+                  'Designed an LLM-based scene-planning and multi-module orchestration architecture.',
+              },
               { content: 'Implemented object-detection and object-generation modules.' },
             ],
           },
-          { content: 'Built a Blender-based automated scene-generation proof of concept and validated its production feasibility.' },
+          {
+            content:
+              'Built a Blender-based automated scene-generation proof of concept and validated its production feasibility.',
+          },
         ],
       },
       {
@@ -161,9 +183,13 @@ const englishPayload: Payload = {
         where: 'GIANTSTEP / AI Research Engineer',
         descriptions: [
           {
-            content: 'Designed and built a natural-language search platform for internal video and 3D assets, improving asset-discovery efficiency.',
+            content:
+              'Designed and built a natural-language search platform for internal video and 3D assets, improving asset-discovery efficiency.',
             descriptions: [
-              { content: 'Developed video-understanding and CLIP-based embedding and retrieval pipelines.' },
+              {
+                content:
+                  'Developed video-understanding and CLIP-based embedding and retrieval pipelines.',
+              },
               { content: 'Implemented natural-language search for videos and 3D objects.' },
             ],
           },
@@ -177,10 +203,16 @@ const englishPayload: Payload = {
         where: 'GIANTSTEP / AI Research Engineer',
         descriptions: [
           {
-            content: 'Designed and developed an AI Playground to improve operational efficiency across business teams.',
+            content:
+              'Designed and developed an AI Playground to improve operational efficiency across business teams.',
             descriptions: [
-              { content: 'Identified requirements and high-value problems through stakeholder interviews.' },
-              { content: 'Benchmarked open-source generative-AI models and ran proofs of concept.' },
+              {
+                content:
+                  'Identified requirements and high-value problems through stakeholder interviews.',
+              },
+              {
+                content: 'Benchmarked open-source generative-AI models and ran proofs of concept.',
+              },
               { content: 'Built FastAPI-based APIs and demonstration services.' },
             ],
           },
@@ -194,14 +226,27 @@ const englishPayload: Payload = {
         where: 'Hallym University MMC Lab / Master’s Program',
         descriptions: [
           {
-            content: 'Designed and developed a robust 3D watermarking model for NeRF-based modality shifts.',
+            content:
+              'Designed and developed a robust 3D watermarking model for NeRF-based modality shifts.',
             descriptions: [
-              { content: 'Designed watermark insertion and extraction architecture that accounts for modality differences among 3D textures, rendered images, and NeRF outputs.' },
-              { content: 'Developed an independent-decoder watermarking model robust to modality shifts during NeRF training and rendering.' },
-              { content: 'Analyzed the trade-off between watermark extraction performance and image quality.' },
+              {
+                content:
+                  'Designed watermark insertion and extraction architecture that accounts for modality differences among 3D textures, rendered images, and NeRF outputs.',
+              },
+              {
+                content:
+                  'Developed an independent-decoder watermarking model robust to modality shifts during NeRF training and rendering.',
+              },
+              {
+                content:
+                  'Analyzed the trade-off between watermark extraction performance and image quality.',
+              },
             ],
           },
-          { content: 'Published this work in ACM Transactions on Multimedia Computing, Communications and Applications (TOMM; Q1, JCR top 7%).' },
+          {
+            content:
+              'Published this work in ACM Transactions on Multimedia Computing, Communications and Applications (TOMM; Q1, JCR top 7%).',
+          },
         ],
       },
       {
@@ -211,10 +256,17 @@ const englishPayload: Payload = {
         where: 'Hallym University MMC Lab / Master’s Program',
         descriptions: [
           {
-            content: 'Developed a pixel-level localization model for images manipulated with diffusion inpainting.',
+            content:
+              'Developed a pixel-level localization model for images manipulated with diffusion inpainting.',
             descriptions: [
-              { content: 'Built a diffusion-inpainting manipulation dataset of approximately 30,000 COCO-based images.' },
-              { content: 'Designed an inter-intra similarity module based on frequency features to improve manipulated-region detection.' },
+              {
+                content:
+                  'Built a diffusion-inpainting manipulation dataset of approximately 30,000 COCO-based images.',
+              },
+              {
+                content:
+                  'Designed an inter-intra similarity module based on frequency features to improve manipulated-region detection.',
+              },
             ],
           },
           { content: 'Published this work in Image and Vision Computing (Q1, JCR top 18.1%).' },
@@ -227,13 +279,20 @@ const englishPayload: Payload = {
         where: 'Hallym University MMC Lab / Master’s Program',
         descriptions: [
           {
-            content: 'Designed and developed a multimodal, multitask model for pancreatic-cancer diagnosis using holographic images and tabular data.',
+            content:
+              'Designed and developed a multimodal, multitask model for pancreatic-cancer diagnosis using holographic images and tabular data.',
             descriptions: [
               { content: 'Preprocessed holographic images and integrated tabular data.' },
-              { content: 'Applied multitask learning for simultaneous cell-line and cancer classification.' },
+              {
+                content:
+                  'Applied multitask learning for simultaneous cell-line and cancer classification.',
+              },
             ],
           },
-          { content: 'Published this work in Computer Methods and Programs in Biomedicine (SCI(E), JCR top 13%).' },
+          {
+            content:
+              'Published this work in Computer Methods and Programs in Biomedicine (SCI(E), JCR top 13%).',
+          },
         ],
       },
       {
@@ -243,13 +302,20 @@ const englishPayload: Payload = {
         where: 'Samsung Medison / Vision Engineer Intern',
         descriptions: [
           {
-            content: 'Designed and developed a CNN-based multiclass model for classifying defects in ultrasound medical devices.',
+            content:
+              'Designed and developed a CNN-based multiclass model for classifying defects in ultrasound medical devices.',
             descriptions: [
-              { content: 'Standardized labeling criteria and rebuilt the dataset through collection and cleaning.' },
+              {
+                content:
+                  'Standardized labeling criteria and rebuilt the dataset through collection and cleaning.',
+              },
               { content: 'Implemented a two-stage hierarchical CNN classification architecture.' },
             ],
           },
-          { content: 'Improved accuracy by more than 30% and streamlined the manual inspection workflow.' },
+          {
+            content:
+              'Improved accuracy by more than 30% and streamlined the manual inspection workflow.',
+          },
         ],
       },
     ],
@@ -264,10 +330,19 @@ const englishPayload: Payload = {
         endedAt: '2026-04',
         where: 'AI-powered 3D body-shape analysis service',
         descriptions: [
-          { content: 'Planned and developed a 3D body-shape analysis service based on full-body photographs.' },
+          {
+            content:
+              'Planned and developed a 3D body-shape analysis service based on full-body photographs.',
+          },
           { content: 'Proposed the project and built the test dataset directly.' },
-          { content: 'Established a pipeline for SAM3D-Body-based 3D human-model generation and Gemini API-based body-shape analysis.' },
-          { content: 'Deployed the service and operated it in collaboration with partner companies.' },
+          {
+            content:
+              'Established a pipeline for SAM3D-Body-based 3D human-model generation and Gemini API-based body-shape analysis.',
+          },
+          {
+            content:
+              'Deployed the service and operated it in collaboration with partner companies.',
+          },
         ],
       },
     ],

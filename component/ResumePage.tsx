@@ -25,6 +25,7 @@ export function ResumePage({
 }) {
   return (
     <>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <NextSeo {...payload._global.seo} />
       <Head>
         <title>{payload._global.headTitle}</title>

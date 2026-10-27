@@ -1,6 +1,6 @@
 import { ResumePage } from '../component/ResumePage';
-import Payload from '../payload/en';
+import englishPayload from '../payload/en';
 
 export default function EnglishResume() {
-  return <ResumePage payload={Payload} language="en" languageSwitchHref="../ko" />;
+  return <ResumePage payload={englishPayload} language="en" languageSwitchHref="../ko" />;
 }
