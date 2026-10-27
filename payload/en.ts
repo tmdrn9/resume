@@ -24,6 +24,7 @@ const englishPayload: Payload = {
   },
   experience: {
     ...koreanPayload.experience,
+    language: 'en',
     list: [
       {
         title: 'NAVER LABS',
@@ -32,6 +33,8 @@ const englishPayload: Payload = {
             title: '3D Vision Research Engineer Intern',
             startedAt: '2026-04',
             endedAt: '2026-10',
+            durationMonths: 6,
+            includeInTotal: false,
             descriptions: [
               'Built an automated indoor floor-plan generation pipeline, from model design through Docker-based packaging.',
               'Developed workflows for indoor 3D reconstruction and mesh refinement.',
@@ -84,6 +87,7 @@ const englishPayload: Payload = {
             title: 'Vision Engineer Intern',
             startedAt: '2022-01',
             endedAt: '2022-06',
+            includeInTotal: false,
             descriptions: [
               'Developed and validated an AI model for detecting defects in ultrasound medical devices.',
               'Analyzed research trends through paper reviews and presented findings in internal seminars.',

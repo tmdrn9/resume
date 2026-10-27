@@ -11,6 +11,8 @@ const experience: IExperience.Payload = {
           title: '3D Vision Research Engineer (Intern)',
           startedAt: '2026-04',
           endedAt: '2026-10',
+          durationMonths: 6,
+          includeInTotal: false,
           descriptions: [
             '실내 도면 생성 자동화 파이프라인 개발 및 모델 설계 · Docker기반 패키징까지 전 과정 수행',
             '실내 공간 3D Reconstruction 및 Mesh Geometry Refinement',
@@ -64,6 +66,7 @@ const experience: IExperience.Payload = {
           title: 'Vision Engineer (Intern)',
           startedAt: '2022-01',
           endedAt: '2022-06',
+          includeInTotal: false,
           descriptions: [
             '초음파 의료기기 불량 검출 AI 개발 및 검증',
             '최신 연구 트렌드 분석을 위한 논문 리뷰 및 내부 세미나 진행',

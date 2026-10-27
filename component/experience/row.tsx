@@ -15,7 +15,8 @@ type PositionWithDates = IExperience.Position & {
 export default function ExperienceRow({
   item,
   index,
-}: PropsWithChildren<{ item: IExperience.Item; index: number }>) {
+  language,
+}: PropsWithChildren<{ item: IExperience.Item; index: number; language: 'ko' | 'en' }>) {
   const positionsWithDates: PositionWithDates[] = item.positions.map((position) => ({
     ...position,
     startedAtDate: DateTime.fromFormat(position.startedAt, Util.LUXON_DATE_FORMAT.YYYY_LL),
@@ -53,6 +54,7 @@ export default function ExperienceRow({
 
   const periodTitle = createOverallWorkingPeriod(sortedPositions);
   const hasMultiplePositions = sortedPositions.length > 1;
+  const durationMonths = hasMultiplePositions ? undefined : sortedPositions[0].durationMonths;
 
   return (
     <div className="experience-item">
@@ -72,7 +74,9 @@ export default function ExperienceRow({
                 </Badge>
               )}
               <Badge color="info" className="ml-1">
-                {Util.getFormattingDuration(minStartedAt, maxEndedAt)}
+                {durationMonths
+                  ? Util.getFormattingDurationMonths(durationMonths, language)
+                  : Util.getFormattingDuration(minStartedAt, maxEndedAt, language)}
               </Badge>
             </span>
           </h4>

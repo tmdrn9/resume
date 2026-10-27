@@ -13,6 +13,8 @@ export declare namespace IExperience {
     list: Item[];
     /** ### 총 경력 기간 표시 유/무 */
     disableTotalPeriod?: boolean;
+    /** Language used for duration labels. */
+    language?: 'ko' | 'en';
   }
 
   export interface Item {
@@ -44,6 +46,10 @@ export declare namespace IExperience {
      */
 
     endedAt?: string;
+    /** Actual elapsed duration in months when month-only dates are not precise enough. */
+    durationMonths?: number;
+    /** Whether this position contributes to the total professional-experience duration. */
+    includeInTotal?: boolean;
     /**
      * ### (직장)경험 설명
      *

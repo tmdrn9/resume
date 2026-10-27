@@ -85,6 +85,11 @@
   margin-top: 88px;
 }
 
+.profile-section--without-image {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 .language-button {
   position: fixed;
   right: 24px;

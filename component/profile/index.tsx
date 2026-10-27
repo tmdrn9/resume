@@ -20,7 +20,7 @@ export const Profile = {
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   const { image, contact, name } = payload;
   return (
-    <div className="profile-section mt-5">
+    <div className={`profile-section mt-5${image ? '' : ' profile-section--without-image'}`}>
       <Row className="profile-main-row">
         {image ? (
           <Col md={3} sm={12} className="profile-media-col">
