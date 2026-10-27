@@ -471,6 +471,19 @@
     margin-right: 0 !important;
   }
 
+  .profile-section--without-image .profile-main-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .profile-section--without-image {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .profile-section--without-image .profile-name-row {
+    margin-left: -4px !important;
+  }
+
   .profile-main-row > .profile-media-col,
   .profile-main-row > .profile-body-col,
   .split-row > .split-left,
@@ -594,6 +607,10 @@
   .section-heading {
     color: #2563eb !important;
     border-bottom-color: #0f172a !important;
+  }
+
+  .profile-name {
+    color: #2563eb !important;
   }
   .tag--accent {
     color: #2563eb !important;
