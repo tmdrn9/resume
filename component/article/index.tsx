@@ -55,7 +55,7 @@ function ArticleRow({ payload }: PropsWithChildren<{ payload: Payload }>) {
 
   return (
     <EmptyRowCol>
-      <CommonDescription descriptions={payload.list} className="publication-list" />
+      <CommonDescription descriptions={payload.list} className="publication-list" highlightAuthor />
     </EmptyRowCol>
   );
 }

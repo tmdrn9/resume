@@ -8,10 +8,12 @@ export function CommonDescription({
   descriptions,
   option,
   className,
+  highlightAuthor,
 }: PropsWithChildren<{
   descriptions: IRow.Description[];
   option?: { padding?: boolean };
   className?: string;
+  highlightAuthor?: boolean;
 }>) {
   return (
     <>
@@ -23,10 +25,15 @@ export function CommonDescription({
           {descriptions.map((description, descIndex) => {
             return (
               <>
-                <Description description={description} key={descIndex.toString()} />
+                <Description
+                  description={description}
+                  highlightAuthor={highlightAuthor}
+                  key={descIndex.toString()}
+                />
                 {description.descriptions ? (
                   <DescriptionRecursion
                     descriptions={description.descriptions}
+                    highlightAuthor={highlightAuthor}
                     key={descIndex.toString()}
                   />
                 ) : (
@@ -46,16 +53,22 @@ export function CommonDescription({
 // ul 태그 depth 표현을 위한 재귀
 function DescriptionRecursion({
   descriptions,
-}: PropsWithChildren<{ descriptions: IRow.Description[] }>) {
+  highlightAuthor,
+}: PropsWithChildren<{ descriptions: IRow.Description[]; highlightAuthor?: boolean }>) {
   return (
     <ul>
       {descriptions.map((description, index) => {
         return (
           <>
-            <Description description={description} key={index.toString()} />
+            <Description
+              description={description}
+              highlightAuthor={highlightAuthor}
+              key={index.toString()}
+            />
             {description.descriptions ? (
               <DescriptionRecursion
                 descriptions={description.descriptions}
+                highlightAuthor={highlightAuthor}
                 key={index.toString()}
               />
             ) : (
@@ -68,24 +81,32 @@ function DescriptionRecursion({
   );
 }
 
-function Description({ description }: PropsWithChildren<{ description: IRow.Description }>) {
-  const { content, href, postImage, postHref, weight, badge } = description;
+function Description({
+  description,
+  highlightAuthor,
+}: PropsWithChildren<{ description: IRow.Description; highlightAuthor?: boolean }>) {
+  const { content, href, postImage, postHref, weight, badge, badges } = description;
 
-  const badgeComponent = badge ? <span className="description-badge">{badge}</span> : null;
+  const badgeComponent = [badge, ...(badges || [])].filter(Boolean).map((label) => (
+    <span className="description-badge" key={label}>
+      {label}
+    </span>
+  ));
 
   const component = (() => {
     if (href && postImage) {
       return (
         <li style={getFontWeight(weight)}>
-          <HrefTargetBlank url={href} text={content} /> {badgeComponent}{' '}
-          <img src={postImage} alt={postImage} />
+          <HrefTargetBlank url={href} text={formatContent(content, highlightAuthor)} />{' '}
+          {badgeComponent} <img src={postImage} alt={postImage} />
         </li>
       );
     }
     if (href) {
       return (
         <li style={getFontWeight(weight)}>
-          <HrefTargetBlank url={href} text={content} /> {badgeComponent}
+          <HrefTargetBlank url={href} text={formatContent(content, highlightAuthor)} />{' '}
+          {badgeComponent}
         </li>
       );
     }
@@ -122,6 +143,18 @@ function Description({ description }: PropsWithChildren<{ description: IRow.Desc
   })();
 
   return component;
+}
+
+function formatContent(content: string, highlightAuthor?: boolean) {
+  if (!highlightAuthor) {
+    return content;
+  }
+
+  return content
+    .split(/(Lee, S\. L\.)/g)
+    .map((part, index) =>
+      part === 'Lee, S. L.' ? <strong key={index.toString()}>{part}</strong> : part,
+    );
 }
 
 function getFontWeight(weight?: IRow.Description['weight']): CSSProperties {

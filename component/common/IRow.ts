@@ -30,6 +30,7 @@ export declare namespace IRow {
 
     /** Description 옆에 표시할 강조 배지 */
     badge?: string;
+    badges?: string[];
 
     /**
      * ### 폰트 두께 설정이 필요할 경우

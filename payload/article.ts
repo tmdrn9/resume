@@ -5,16 +5,16 @@ const article: IArticle.Payload = {
 
   list: [
     {
-      badge: 'First Author',
       content:
         'Lee, S. L., Kang, M., Shim, B. S. and Hou, J. U.†, "Robust 3D Watermarking for NeRF-Induced Modality Shifts" ACM Transactions on Multimedia Computing, Communications and Applications, 2025.',
       href: 'https://dl.acm.org/doi/10.1145/3774650',
+      badges: ['JCR 7.7%', 'IF 6.0'],
     },
     {
-      badge: 'First Author',
       content:
         'Lee, S. L., Kang, M. and Hou, J. U.†, "Localization of diffusion model-based inpainting through the inter-intra similarity of frequency features." Image and Vision Computing, 2024.',
       href: 'https://www.sciencedirect.com/science/article/abs/pii/S0262885624002427',
+      badges: ['JCR 13.4%', 'IF 4.2'],
     },
     {
       content:
@@ -30,11 +30,13 @@ const article: IArticle.Payload = {
       content:
         'Kim, C., Kang, M., Yuh, W. T., Lee, S. L., Lee, J. J., Hou, J. U., & Kang, S. H.†, "Comparative efficacy of anteroposterior and lateral X-ray based deep learning in the detection of osteoporotic vertebral compression fracture." Scientific Reports, 2024.',
       href: 'https://www.nature.com/articles/s41598-024-79610-w',
+      badges: ['JCR 18.3%', 'IF 3.8'],
     },
     {
       content:
         'Hong, S. J., Hou, J. U., Chung, M. J., Kang, S. H., Shim, B. S., Lee, S. L., Park D., Choi, A., Oh, J. Y., Lee, K. J., Shin, E., Cho, E., Park S. W.†, "Convolutional neural network model for automatic recognition and classification of pancreatic cancer cell based on analysis of lipid droplet on unlabeled sample by 3D optical diffraction tomography" Computer Methods and Programs in Biomedicine, 2024.',
       href: 'https://www.sciencedirect.com/science/article/pii/S0169260724000373',
+      badges: ['JCR 13.6%', 'IF 4.9'],
     },
     {
       content:
