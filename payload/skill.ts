@@ -19,10 +19,7 @@ const networkSecurity: ISkill.Skill = {
   category: 'Frameworks & Libraries',
   items: [
     {
-      title: 'PyTorch',
-    },
-    {
-      title: 'TensorFlow',
+      title: 'PyTorch/JAX',
     },
     {
       title: 'OpenCV',
@@ -34,7 +31,7 @@ const networkSecurity: ISkill.Skill = {
       title: 'NumPy',
     },
     {
-      title: 'Pandas',
+      title: 'FastAPI',
     },
     {
       title: 'PyTorch3D',
@@ -43,7 +40,7 @@ const networkSecurity: ISkill.Skill = {
       title: 'Shapely',
     },
     {
-      title: 'Matplotlib',
+      title: 'Flask',
     },
   ],
 };

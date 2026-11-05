@@ -18,8 +18,8 @@ const englishPayload: Payload = {
   introduce: {
     ...koreanPayload.introduce,
     contents: [
-      'I am a 3D Vision and Generative AI R&D Engineer with experience spanning NeRF research, generative 3D scene generation, indoor 3D reconstruction, and mesh refinement. My research has resulted in six SCI(E) publications, including two first-author papers in ACM TOMM and Image and Vision Computing.',
-      'I have worked across the full development cycle, from data construction and problem formulation to model design, training, evaluation, and internal service deployment. I am comfortable defining unfamiliar problems and driving them through to completion, with a focus on turning 3D spatial data into practical value for real-world services.',
+      'I am a research engineer specializing in 3D vision and generative AI, with experience in NeRF research, 3D scene generation, indoor 3D reconstruction, and mesh refinement. I have coauthored six journal papers indexed in SCIE, including two first-author papers published in ACM TOMM and Image and Vision Computing.',
+      'My experience spans problem definition, dataset development, model design, training, evaluation, and deployment of internal services. I take ownership of unfamiliar problems and see them through to completion, with a focus on applying 3D vision to practical products and services.',
     ],
   },
   experience: {
@@ -36,9 +36,9 @@ const englishPayload: Payload = {
             durationMonths: 6,
             includeInTotal: false,
             descriptions: [
-              'Built an automated indoor floor-plan generation pipeline, from model design through Docker-based packaging.',
-              'Developed workflows for indoor 3D reconstruction and mesh refinement.',
-              'Built a simulation viewer for semantic texture baking and material replacement.',
+              'Developed an automated indoor floor plan generation pipeline, from model design to Docker packaging.',
+              'Developed pipelines for indoor 3D reconstruction and mesh refinement.',
+              'Developed an interior visualization tool with semantic texture baking and region-specific material replacement.',
             ],
             skillKeywords: [
               'Linux',
@@ -61,14 +61,14 @@ const englishPayload: Payload = {
             startedAt: '2025-07',
             endedAt: '2026-03',
             descriptions: [
-              'Researched generative-AI approaches for agentic 3D scene generation.',
-              'Led the end-to-end development and deployment of an internal AI asset-search platform.',
-              'Built an AI Playground service to evaluate whether AI could address real-world production pain points, select suitable open-source models, and expose them through APIs.',
-              'Published monthly paper reviews and an internal AI newsletter to share emerging technology trends.',
+              'Investigated generative AI methods for agentic 3D scene generation.',
+              'Led AI development for an internal asset search platform, from model evaluation and pipeline development to API deployment.',
+              'Developed an internal AI playground to evaluate solutions to content production challenges, select suitable open-source models, and make them available through APIs.',
+              'Conducted monthly paper reviews and wrote an internal newsletter covering developments in AI.',
             ],
             skillKeywords: [
               'Linux',
-              'PyTorch',
+              'PyTorch/JAX',
               'PyTorch3D',
               'FastAPI',
               'Docker',
@@ -90,7 +90,7 @@ const englishPayload: Payload = {
             includeInTotal: false,
             descriptions: [
               'Developed and validated an AI model for detecting defects in ultrasound medical devices.',
-              'Analyzed research trends through paper reviews and presented findings in internal seminars.',
+              'Reviewed recent research and presented findings at internal seminars.',
             ],
             skillKeywords: ['Git', 'DIGITS', 'Caffe'],
           },
@@ -102,54 +102,58 @@ const englishPayload: Payload = {
     ...koreanPayload.project,
     list: [
       {
-        title: 'Indoor 3D Mesh Refinement and Interior Simulation',
+        title: 'Indoor 3D Mesh Refinement and Interior Visualization',
         startedAt: '2026-07',
         endedAt: '2026-10',
         where: 'NAVER LABS / 3D Vision Research Engineer Intern',
         descriptions: [
           {
             content:
-              'Built a 3D asset-generation and simulation demo that improves reconstructed indoor meshes and supports region-specific material replacement.',
+              'Developed a demo for refining reconstructed indoor meshes and visualizing region-specific material changes.',
             descriptions: [
               {
                 content:
-                  'Designed a train-free mesh-refinement approach for settings without ground-truth data.',
+                  'Designed a mesh refinement pipeline that requires no additional training or ground-truth meshes.',
               },
               {
                 content:
-                  'Built a simulation viewer that integrates semantic texture baking and PBR-generation APIs.',
+                  'Developed an interactive viewer integrating semantic texture baking with APIs for generating physically based rendering (PBR) materials.',
               },
             ],
           },
-          { content: 'Established the foundation for an extensible interior-simulation pipeline.' },
+          {
+            content:
+              'Built a foundation for further development of the interior visualization pipeline.',
+          },
         ],
       },
       {
-        title: 'Automated Floor-Plan Generation from 3D Meshes',
+        title: 'Automated Floor Plan Generation from 3D Meshes',
         startedAt: '2026-04',
         endedAt: '2026-06',
         where: 'NAVER LABS / 3D Vision Research Engineer Intern',
         descriptions: [
           {
             content:
-              'Designed and built a pipeline that automatically generates indoor floor plans from reconstructed 3D meshes.',
+              'Designed and developed a pipeline to automatically generate indoor floor plans from reconstructed 3D meshes.',
             descriptions: [
               {
-                content: 'Developed density-map-based BEV rotation alignment with an MAE of 0.55°.',
+                content:
+                  'Developed a model to align bird’s-eye-view (BEV) density maps, achieving a mean absolute angular error of 0.55°.',
               },
               {
                 content:
-                  'Developed room-polygon and door-prediction models using YOLO segmentation and Transformer refinement (mAP50–95 0.88; F1 0.96).',
+                  'Developed room polygon and door prediction models using YOLO segmentation and transformer-based refinement (mAP50–95: 0.88; F1: 0.96).',
               },
               {
                 content:
-                  'Established an editor-compatible export format and a Docker-based one-command execution environment.',
+                  'Implemented exports compatible with the existing editing tool and packaged the pipeline in Docker for execution with a single command.',
               },
             ],
           },
           {
             content:
-              'Reduced manual drafting from 14 minutes per case to 2–3 seconds and shifted the workflow toward review.',
+              'Reduced floor plan generation time from 14 minutes of manual drafting to 2–3 seconds of automated processing, shifting the workflow from drafting to review.',
           },
         ],
       },
@@ -161,18 +165,18 @@ const englishPayload: Payload = {
         descriptions: [
           {
             content:
-              'Designed and developed an agentic 3D scene-generation system to automate repetitive scene-composition work.',
+              'Designed and developed an agentic 3D scene generation system to automate repetitive scene assembly tasks.',
             descriptions: [
               {
                 content:
-                  'Designed an LLM-based scene-planning and multi-module orchestration architecture.',
+                  'Designed an architecture for LLM-based scene planning and orchestration across multiple modules.',
               },
-              { content: 'Implemented object-detection and object-generation modules.' },
+              { content: 'Implemented object detection and 3D object generation modules.' },
             ],
           },
           {
             content:
-              'Built a Blender-based automated scene-generation proof of concept and validated its production feasibility.',
+              'Built a Blender-based proof of concept for automated scene generation and assessed its feasibility for use in content production.',
           },
         ],
       },
@@ -184,16 +188,23 @@ const englishPayload: Payload = {
         descriptions: [
           {
             content:
-              'Designed and built a natural-language search platform for internal video and 3D assets, improving asset-discovery efficiency.',
+              'Designed and built a natural language search platform for internal video and 3D assets, improving asset discovery efficiency.',
             descriptions: [
               {
                 content:
-                  'Developed video-understanding and CLIP-based embedding and retrieval pipelines.',
+                  'Developed a video processing pipeline incorporating JAX-based embedding inference.',
               },
-              { content: 'Implemented natural-language search for videos and 3D objects.' },
+              {
+                content:
+                  'Built a pipeline for rendering 3D assets from multiple viewpoints and extracting image embeddings.',
+              },
+              {
+                content:
+                  'Developed embedding APIs for video, rendered 3D asset images, and text, and integrated them with the backend.',
+              },
             ],
           },
-          { content: 'Launched and operated the platform as an internal web service.' },
+          { content: 'Deployed and operated the platform as an internal web service.' },
         ],
       },
       {
@@ -204,19 +215,20 @@ const englishPayload: Payload = {
         descriptions: [
           {
             content:
-              'Designed and developed an AI Playground to improve operational efficiency across business teams.',
+              'Designed and developed an internal AI playground to streamline workflows across teams.',
             descriptions: [
               {
                 content:
-                  'Identified requirements and high-value problems through stakeholder interviews.',
+                  'Interviewed internal users to identify requirements and opportunities for AI-assisted workflow improvements.',
               },
               {
-                content: 'Benchmarked open-source generative-AI models and ran proofs of concept.',
+                content:
+                  'Evaluated open-source generative AI models and developed proofs of concept.',
               },
-              { content: 'Built FastAPI-based APIs and demonstration services.' },
+              { content: 'Developed model APIs with FastAPI and built demo applications.' },
             ],
           },
-          { content: 'Published a recurring internal newsletter on emerging AI technology.' },
+          { content: 'Published a regular internal newsletter covering developments in AI.' },
         ],
       },
       {
@@ -227,25 +239,24 @@ const englishPayload: Payload = {
         descriptions: [
           {
             content:
-              'Designed and developed a robust 3D watermarking model for NeRF-based modality shifts.',
+              'Designed and developed a 3D watermarking model robust to NeRF-induced modality shifts.',
             descriptions: [
               {
                 content:
-                  'Designed watermark insertion and extraction architecture that accounts for modality differences among 3D textures, rendered images, and NeRF outputs.',
+                  'Designed a watermark embedding and extraction architecture to account for differences among 3D textures, rendered images, and NeRF outputs.',
               },
               {
                 content:
-                  'Developed an independent-decoder watermarking model robust to modality shifts during NeRF training and rendering.',
+                  'Developed a watermarking model with independent decoders to preserve watermark recovery through NeRF training and rendering.',
               },
               {
-                content:
-                  'Analyzed the trade-off between watermark extraction performance and image quality.',
+                content: 'Analyzed the trade-off between watermark recovery and visual quality.',
               },
             ],
           },
           {
             content:
-              'Published this work in ACM Transactions on Multimedia Computing, Communications and Applications (TOMM; Q1, JCR top 7%).',
+              'Published the research in ACM Transactions on Multimedia Computing, Communications and Applications (TOMM; Q1, JCR top 7%).',
           },
         ],
       },
@@ -257,19 +268,19 @@ const englishPayload: Payload = {
         descriptions: [
           {
             content:
-              'Developed a pixel-level localization model for images manipulated with diffusion inpainting.',
+              'Developed a model to localize diffusion-inpainted regions at the pixel level.',
             descriptions: [
               {
                 content:
-                  'Built a diffusion-inpainting manipulation dataset of approximately 30,000 COCO-based images.',
+                  'Created a dataset of approximately 30,000 manipulated images by applying diffusion inpainting to COCO images.',
               },
               {
                 content:
-                  'Designed an inter-intra similarity module based on frequency features to improve manipulated-region detection.',
+                  'Designed a frequency-based module that combines inter-patch and intra-patch similarity to improve localization of manipulated regions.',
               },
             ],
           },
-          { content: 'Published this work in Image and Vision Computing (Q1, JCR top 18.1%).' },
+          { content: 'Published the research in Image and Vision Computing (Q1, JCR top 18.1%).' },
         ],
       },
       {
@@ -280,18 +291,18 @@ const englishPayload: Payload = {
         descriptions: [
           {
             content:
-              'Designed and developed a multimodal, multitask model for pancreatic-cancer diagnosis using holographic images and tabular data.',
+              'Designed and developed a multimodal, multitask model for pancreatic cancer diagnosis using holographic images and tabular data.',
             descriptions: [
               { content: 'Preprocessed holographic images and integrated tabular data.' },
               {
                 content:
-                  'Applied multitask learning for simultaneous cell-line and cancer classification.',
+                  'Used multitask learning to jointly perform cell line classification and cancer classification.',
               },
             ],
           },
           {
             content:
-              'Published this work in Computer Methods and Programs in Biomedicine (SCI(E), JCR top 13%).',
+              'Published the research in Computer Methods and Programs in Biomedicine (SCI(E), JCR top 13%).',
           },
         ],
       },
@@ -303,13 +314,13 @@ const englishPayload: Payload = {
         descriptions: [
           {
             content:
-              'Designed and developed a CNN-based multiclass model for classifying defects in ultrasound medical devices.',
+              'Designed and developed a CNN-based model to classify defects in ultrasound medical devices.',
             descriptions: [
               {
                 content:
-                  'Standardized labeling criteria and rebuilt the dataset through collection and cleaning.',
+                  'Standardized labeling criteria and improved the dataset through additional data collection and cleaning.',
               },
-              { content: 'Implemented a two-stage hierarchical CNN classification architecture.' },
+              { content: 'Implemented a two-stage hierarchical CNN classifier.' },
             ],
           },
           {
@@ -328,20 +339,19 @@ const englishPayload: Payload = {
         websiteHref: 'https://personalbody.co.kr/business',
         startedAt: '2025-12',
         endedAt: '2026-04',
-        where: 'AI-powered 3D body-shape analysis service',
+        where: 'AI-powered 3D body analysis service',
         descriptions: [
           {
             content:
-              'Planned and developed a 3D body-shape analysis service based on full-body photographs.',
+              'Conceived and developed a service for 3D body shape analysis from full-body photos.',
           },
-          { content: 'Proposed the project and built the test dataset directly.' },
+          { content: 'Collected and curated a test dataset to validate the service.' },
           {
             content:
-              'Established a pipeline for SAM3D-Body-based 3D human-model generation and Gemini API-based body-shape analysis.',
+              'Built a pipeline combining SAM3D-Body for 3D human reconstruction with the Gemini API for body shape analysis.',
           },
           {
-            content:
-              'Deployed the service and operated it in collaboration with partner companies.',
+            content: 'Deployed and operated the service in collaboration with partner companies.',
           },
         ],
       },

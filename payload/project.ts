@@ -82,8 +82,9 @@ const project: IProject.Payload = {
           content:
             ' 자연어 기반 사내 비디오·3D 에셋 검색 플랫폼을 설계·개발하여 에셋 탐색 업무 효율화에 기여',
           descriptions: [
-            { content: 'Video Understanding 및 CLIP 기반 임베딩/Retrieval 파이프라인 개발' },
-            { content: '자연어 Query 기반 비디오·3D Object 검색 기능 구현' },
+            { content: 'JAX 기반 임베딩 추론을 활용한 비디오 처리 파이프라인 개발' },
+            { content: '다중 시점 렌더링 기반 3D 에셋 이미지 생성·임베딩 파이프라인 개발' },
+            { content: '비디오·3D 에셋 및 텍스트 인코더의 임베딩 추론 API 개발·백엔드 연동' },
           ],
         },
         {

@@ -47,9 +47,10 @@ const experience: IExperience.Payload = {
           ],
           skillKeywords: [
             'Linux',
-            'PyTorch',
+            'PyTorch/JAX',
             'PyTorch3D',
             'fastAPI',
+            'Flask',
             'Docker',
             'Git',
             'ffmpeg',
