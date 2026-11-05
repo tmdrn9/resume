@@ -68,7 +68,7 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content: 'Blender 기반 자동 Scene 생성 PoC 구현 및 실무 적용 가능성 검증',
+          content: 'Blender 기반 자동 Scene 생성 PoC 구현 및 실무 적용',
         },
       ],
     },

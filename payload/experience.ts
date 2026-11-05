@@ -40,7 +40,7 @@ const experience: IExperience.Payload = {
           startedAt: '2025-07',
           endedAt: '2026-03',
           descriptions: [
-            'Generative AI 기반 Agentic 3D Scene Generation 기술 조사 및 연구',
+            'Generative AI 기반 Agentic 3D Scene Generation PoC 개발 및 실제 업무에 도입',
             '사내 AI 에셋 검색 플랫폼의 초기 개발 단계부터 참여하여, 배포까지 전 과정 수행',
             '사내 AI모델 활용을 위한 Playground 서비스 개발: 실무 페인포인트의 AI해결 가능성 검증(PoC), 최적 오픈소스 선정 및 API화',
             '매달 논문 리뷰 및 AI 뉴스레터 작성을 통한 최신 기술 현황 공유',

@@ -61,7 +61,7 @@ const englishPayload: Payload = {
             startedAt: '2025-07',
             endedAt: '2026-03',
             descriptions: [
-              'Investigated generative AI methods for agentic 3D scene generation.',
+              'Developed and introduced a generative AI–powered proof of concept for agentic 3D scene generation into production workflows.',
               'Led AI development for an internal asset search platform, from model evaluation and pipeline development to API deployment.',
               'Developed an internal AI playground to evaluate solutions to content production challenges, select suitable open-source models, and make them available through APIs.',
               'Conducted monthly paper reviews and wrote an internal newsletter covering developments in AI.',
@@ -176,7 +176,7 @@ const englishPayload: Payload = {
           },
           {
             content:
-              'Built a Blender-based proof of concept for automated scene generation and assessed its feasibility for use in content production.',
+              'Built a Blender-based proof of concept for automated scene generation and applied it to content production workflows.',
           },
         ],
       },
