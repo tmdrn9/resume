@@ -442,6 +442,26 @@
     page-break-inside: avoid !important;
   }
 
+  /* Korean project descriptions need tighter spacing to leave room for
+     Side Project on page three without removing any content. */
+  main[lang='ko'] .project-list {
+    font-size: 10.5pt;
+    line-height: 1.25;
+  }
+
+  main[lang='ko'] .project-list ul {
+    margin-bottom: 8px;
+  }
+
+  main[lang='ko'] .project-list ul ul {
+    margin-bottom: 0;
+  }
+
+  main[lang='ko'] .project-list hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   /* Side Project alone may continue in the remaining space after Project. */
   .side-project-section .editorial-section,
   .side-project-section .side-project-item {
@@ -455,8 +475,18 @@
   }
 
   .side-project-section .section-title-content {
-    break-inside: avoid-page !important;
-    page-break-inside: avoid !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* Block wrappers let the browser fragment the content below the heading
+     instead of moving the outer Bootstrap flex row to the next page. */
+  .side-project-section .section-title-content > .row {
+    display: block !important;
+  }
+
+  .side-project-section .section-title-content > .row > .col {
+    width: 100% !important;
   }
 
   .editorial-section[aria-labelledby='section-publications'] .section-title-content,
@@ -588,8 +618,6 @@
   .section-heading {
     break-after: avoid;
   }
-  section,
-
   /* 10. A4 레이아웃 */
   @page {
     margin: 15mm;
