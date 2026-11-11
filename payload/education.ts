@@ -6,13 +6,13 @@ const education: IEducation.Payload = {
   list: [
     {
       title: '한림대학교 일반대학원',
-      subTitle: '컴퓨터공학 석사',
+      subTitle: '컴퓨터공학 석사 (GPA: 4.42/4.5)',
       startedAt: '2022-09',
       endedAt: '2024-08',
     },
     {
       title: '한림대학교',
-      subTitle: '전자공학 / 빅데이터 전공 학사',
+      subTitle: '전자공학 / 빅데이터 전공 학사 (GPA: 3.99/4.5)',
       startedAt: '2018-03',
       endedAt: '2022-08',
     },

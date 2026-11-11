@@ -362,13 +362,13 @@ const englishPayload: Payload = {
     list: [
       {
         title: 'Hallym University',
-        subTitle: 'M.S. in Computer Science',
+        subTitle: 'M.S. in Computer Science (GPA: 4.42/4.5)',
         startedAt: '2022-09',
         endedAt: '2024-08',
       },
       {
         title: 'Hallym University',
-        subTitle: 'B.S. in Electronic Engineering and Big Data',
+        subTitle: 'B.S. in Electronic Engineering and Big Data (GPA: 3.99/4.5)',
         startedAt: '2018-03',
         endedAt: '2022-08',
       },

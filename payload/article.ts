@@ -18,12 +18,12 @@ const article: IArticle.Payload = {
     },
     {
       content:
-        'Park, S. W., Moon, H. C., Hong, S. J., Choi, A., Lee, S. L., Park, D. H., ... & Lee, K. J, "Enhancing biliary tract cancer diagnosis using AI-driven 3D optical diffraction tomography" Methods, 2025',
+        'Park, S. W., Moon, H. C., Hong, S. J., Choi, A., Lee, S. L., Park, D. H., ... & Lee, K. J, "Enhancing biliary tract cancer diagnosis using AI-driven 3D optical diffraction tomography" Methods, 2025.',
       href: 'https://www.sciencedirect.com/science/article/abs/pii/S1046202325001434',
     },
     {
       content:
-        'Hou, J. U., Yoo, T., Park, S. W., Lee, S. L., Cho, W. T., Park, K. H., ... & Kwon, C. H. D., "An artificial intelligence-based image recognition model using indocyanine green cholangiography to identify the hepatocystic triangle during minimally invasive cholecystectomy" Videosurgery and other miniinvasive techniques, 2025',
+        'Hou, J. U., Yoo, T., Park, S. W., Lee, S. L., Cho, W. T., Park, K. H., ... & Kwon, C. H. D., "An artificial intelligence-based image recognition model using indocyanine green cholangiography to identify the hepatocystic triangle during minimally invasive cholecystectomy" Videosurgery and other miniinvasive techniques, 2025.',
       href: 'https://pubmed.ncbi.nlm.nih.gov/41757328',
     },
     {
