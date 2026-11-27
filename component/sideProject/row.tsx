@@ -1,9 +1,11 @@
 import { DateTime } from 'luxon';
 import { PropsWithChildren } from 'react';
+import { Badge } from 'reactstrap';
 import { CommonRows } from '../common/CommonRow';
 import { EmptyRowCol } from '../common';
 import { IRow } from '../common/IRow';
 import { ShowMoreWrapper } from '../common/ShowMoreWrapper';
+import { Style } from '../common/Style';
 import Util from '../common/Util';
 import { ISideProject } from './ISideProject';
 
@@ -46,6 +48,11 @@ function serialize(payload: ISideProject.Item): IRow.Payload {
   return {
     left: {
       title,
+      subTitle: payload.contribution ? (
+        <span style={{ ...Style.gray, fontSize: '14px' }}>{payload.contribution}</span>
+      ) : (
+        undefined
+      ),
     },
     right: {
       title: payload.websiteHref ? (
@@ -65,6 +72,23 @@ function serialize(payload: ISideProject.Item): IRow.Payload {
       ),
       subTitle: payload.where,
       descriptions: payload.descriptions,
+      footer: createSkillKeywords(payload.skillKeywords),
     },
   };
+}
+
+function createSkillKeywords(skillKeywords?: string[]) {
+  if (!skillKeywords || skillKeywords.length === 0) {
+    return undefined;
+  }
+
+  return (
+    <div className="project-skill-keywords">
+      {skillKeywords.map((keyword) => (
+        <Badge style={Style.skillKeywordBadge} key={keyword} color="secondary" className="mr-1">
+          {keyword}
+        </Badge>
+      ))}
+    </div>
+  );
 }

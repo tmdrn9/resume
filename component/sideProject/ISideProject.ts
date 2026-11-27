@@ -12,6 +12,8 @@ export declare namespace ISideProject {
     where: string;
     startedAt: string;
     endedAt?: string;
+    contribution?: string;
+    skillKeywords?: string[];
     descriptions: IRow.Description[];
   }
 }

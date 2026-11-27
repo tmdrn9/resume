@@ -40,6 +40,7 @@ export function CommonRows({
           ) : (
             ''
           )}
+          {right.footer}
         </Col>
       </Row>
     </div>

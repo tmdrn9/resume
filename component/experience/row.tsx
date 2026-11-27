@@ -100,7 +100,6 @@ export default function ExperienceRow({
               {position.descriptions.map((description, descIndex) => (
                 <li key={descIndex.toString()}>{description}</li>
               ))}
-              {createSkillKeywords(position.skillKeywords)}
             </ul>
           </Col>
         </Row>
@@ -135,29 +134,6 @@ function createOverallWorkingPeriod(positions: PositionWithDates[]) {
   }
 
   return `${startedAt.toFormat(DATE_FORMAT)} ~ ${endedAt.toFormat(DATE_FORMAT)}`;
-}
-
-function createSkillKeywords(skillKeywords?: string[]) {
-  if (!skillKeywords) {
-    return null;
-  }
-  return (
-    <li>
-      <strong>Skill Keywords</strong>
-      <div>
-        {skillKeywords.map((keyword, index) => (
-          <Badge
-            style={Style.skillKeywordBadge}
-            key={index.toString()}
-            color="secondary"
-            className="mr-1"
-          >
-            {keyword}
-          </Badge>
-        ))}
-      </div>
-    </li>
-  );
 }
 
 function createWorkingPeriod(startedAt: DateTime, endedAt?: DateTime | null) {

@@ -16,6 +16,8 @@ const project: IProject.Payload = {
       title: '실내 3D Mesh Refinement 및 인테리어 시뮬레이션 개발',
       startedAt: '2026-07',
       endedAt: '2026-10',
+      contribution: '기여도: 100%',
+      skillKeywords: ['PyTorch', 'Hugging Face', 'GenRecon', 'Docker Compose', 'MVS-Texturing'],
       where: WHERE.NVL,
       descriptions: [
         {
@@ -35,6 +37,8 @@ const project: IProject.Payload = {
       title: '3D Mesh 기반 도면 생성 자동화 개발',
       startedAt: '2026-04',
       endedAt: '2026-06',
+      contribution: '기여도: 100%',
+      skillKeywords: ['PyTorch', 'YOLO', 'Transformer', 'Shapely', 'Docker'],
       where: WHERE.NVL,
       descriptions: [
         {
@@ -55,17 +59,22 @@ const project: IProject.Payload = {
     },
     {
       title: 'Agentic 3D Scene Generation 개발',
-      startedAt: '2025-10',
-      endedAt: '2026-03',
+      startedAt: '2025-11',
+      endedAt: '2026-02',
+      contribution: '기여도: 90%',
+      skillKeywords: ['Claude', 'MCP', 'Blender Python API', 'SAM3D', 'SAM3'],
       where: WHERE.GS,
       descriptions: [
         {
           content:
-            '반복적인 Scene 구성 업무 자동화를 위한 Agentic 3D Scene Generation 시스템 설계·개발',
+            '반복적인 Scene 구성 업무 자동화를 위한 Agentic 3D Scene Generation 시스템 개발 전담',
           descriptions: [
             { content: 'LLM 기반 Scene Planning 및 Multi-module Orchestration 구조 설계' },
             { content: 'Object Detection/Generation 모듈 구현' },
           ],
+        },
+        {
+          content: '기존 수 시간 소요되던 작업을 사용자 상호작용 시간을 포함해 10분 내로 단축',
         },
         {
           content: 'Blender 기반 자동 Scene 생성 PoC 구현 및 실무 적용',
@@ -76,11 +85,12 @@ const project: IProject.Payload = {
       title: '사내 에셋 검색 플랫폼 개발',
       startedAt: '2025-08',
       endedAt: '2026-01',
+      contribution: '기여도: 60%',
+      skillKeywords: ['JAX/Flax', 'FastAPI', 'VideoPrism', 'PySceneDetect', 'FFmpeg', 'Docker'],
       where: WHERE.GS,
       descriptions: [
         {
-          content:
-            ' 자연어 기반 사내 비디오·3D 에셋 검색 플랫폼을 설계·개발하여 에셋 탐색 업무 효율화에 기여',
+          content: ' 자연어 기반 비디오·3D 에셋 검색 플랫폼의 AI 파트 설계 및 개발 전담',
           descriptions: [
             { content: 'JAX 기반 임베딩 추론을 활용한 비디오 처리 파이프라인 개발' },
             { content: '다중 시점 렌더링 기반 3D 에셋 이미지 생성·임베딩 파이프라인 개발' },
@@ -88,22 +98,27 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content: '사내 웹 서비스로 배포 및 운영',
+          content: '테스트 데이터 기준 Top-1 Accuracy 87.21%, Top-5 Accuracy 98.84% 달성',
+        },
+        {
+          content: '실제 서비스 환경에서 1초 이내 검색 응답 구현 및 사내 웹 서비스 배포·운영',
         },
       ],
     },
     {
       title: '사내 Playground 서비스 개발',
       startedAt: '2025-07',
-      endedAt: '2026-03',
+      endedAt: '2026-02',
+      contribution: '기여도: 30%',
+      skillKeywords: ['PyTorch', 'FastAPI', 'Gradio', 'Docker'],
       where: WHERE.GS,
       descriptions: [
         {
-          content: '현업 부서의 업무 효율화를 위한 AI Playground 서비스 설계·개발',
+          content: '현업 부서의 업무 효율화를 위한 AI Playground 서비스 개발',
           descriptions: [
-            { content: '현업 인터뷰를 통한 요구사항 정의 및 문제 발굴' },
+            { content: '현업 인터뷰를 통한 요구사항 정의 및 AI 적용 가능성 검증' },
             { content: 'Generative AI 오픈소스 모델 조사 및 PoC 수행' },
-            { content: 'FastAPI 기반 API 및 데모 서비스 구현' },
+            { content: 'FastAPI 기반 AI 추론 API 3종 및 데모 서비스 구현' },
           ],
         },
         {
@@ -115,6 +130,8 @@ const project: IProject.Payload = {
       title: 'NeRF가 유발하는 모달리티 변환에 강인한 워터마킹 연구',
       startedAt: '2023-08',
       endedAt: '2025-11',
+      contribution: '기여도: 80%',
+      skillKeywords: ['PyTorch', 'PyTorch3D', 'NeRF', 'MeshLab'],
       where: WHERE.MMC,
       descriptions: [
         {
@@ -141,6 +158,8 @@ const project: IProject.Payload = {
       title: 'Diffusion inpainting 검출 모델 연구',
       startedAt: '2022-12',
       endedAt: '2024-06',
+      contribution: '기여도: 70%',
+      skillKeywords: ['PyTorch', 'Diffusion Models', 'Transformer', 'U-Net', 'FFT', 'Docker'],
       where: WHERE.MMC,
       descriptions: [
         {
@@ -163,6 +182,8 @@ const project: IProject.Payload = {
       title: '3차원 홀로그래피와 딥러닝을 이용한 췌장암 진단 기술 개발',
       startedAt: '2022-08',
       endedAt: '2024-02',
+      contribution: '기여도: 40%',
+      skillKeywords: ['Python', 'PyTorch', 'CNN'],
       where: WHERE.MMC,
       descriptions: [
         {
@@ -182,6 +203,8 @@ const project: IProject.Payload = {
       title: '초음파기기 불량품 진단 모델 개발',
       startedAt: '2022-02',
       endedAt: '2022-06',
+      contribution: '기여도: 100%',
+      skillKeywords: ['Python', 'Caffe', 'DIGITS', 'CNN'],
       where: WHERE.SM,
       descriptions: [
         {
@@ -192,7 +215,7 @@ const project: IProject.Payload = {
           ],
         },
         {
-          content: '정확도 30% 이상 향상 및 기존 수작업 검사 공정의 진단 효율 개선',
+          content: '불량 검출 정확도를 약 60%에서 90% 이상으로 개선',
         },
       ],
     },

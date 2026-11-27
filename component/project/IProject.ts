@@ -38,6 +38,12 @@ export declare namespace IProject {
      */
     endedAt?: string;
 
+    /** 프로젝트 기여도 */
+    contribution?: string;
+
+    /** 프로젝트에 사용한 기술 키워드 */
+    skillKeywords?: string[];
+
     /**
      * ### 프로젝트 설명
      */

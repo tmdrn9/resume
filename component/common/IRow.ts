@@ -13,6 +13,7 @@ export declare namespace IRow {
     title?: string | JSX.Element;
     subTitle?: string;
     descriptions?: Description[];
+    footer?: JSX.Element;
   }
 
   /**

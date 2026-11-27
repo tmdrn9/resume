@@ -58,12 +58,5 @@ export declare namespace IExperience {
      */
 
     descriptions: string[];
-    /**
-     * ### (직장)경험의 키워드
-     *
-     * @description undefined 가 아닐 경우 해당 경험 하단에 **Skill Keywords** 목록이 추가된다.
-     */
-
-    skillKeywords?: string[];
   }
 }
