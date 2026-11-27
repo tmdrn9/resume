@@ -1,10 +1,8 @@
-import { Row, Col, Badge } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { PropsWithChildren } from 'react';
-import { DateTime } from 'luxon';
 import { CommonSection } from '../common/CommonSection';
 import { EmptyRowCol } from '../common';
 import { Style } from '../common/Style';
-import Util from '../common/Util';
 import { IIntroduce } from './IIntroduce';
 import { PreProcessingComponent } from '../common/PreProcessingComponent';
 
@@ -21,16 +19,8 @@ export const Introduce = {
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   const paragraphOccurrences = new Map<string, number>();
-  const latestUpdated = DateTime.fromFormat(
-    payload.latestUpdated,
-    Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
-  );
-  const latestUpdatedByNow = Math.floor(
-    DateTime.local().diff(latestUpdated).milliseconds / 1000 / 60 / 60 / 24,
-  );
-
   return (
-    <CommonSection title="INTRODUCE" hideTitle>
+    <CommonSection title="INTRODUCTION" hideTitle>
       <EmptyRowCol>
         <Row className="split-row">
           <Col sm={12} md={3} className="split-left">
@@ -38,7 +28,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
               className="section-heading introduce-heading"
               style={{ ...Style.blue, fontSize: '22px' }}
             >
-              INTRODUCE
+              INTRODUCTION
             </h2>
           </Col>
           <Col sm={12} md={9} className="split-right">
@@ -66,15 +56,10 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
                 </p>
               );
             })}
-            <p className="text-right">
-              <small>Latest Updated</small>{' '}
-              <Badge color="secondary">
-                {`${latestUpdated.toFormat(
-                  Util.LUXON_DATE_FORMAT.YYYY_DOT_LL_DOT_DD,
-                )} (D+${latestUpdatedByNow})`}
-              </Badge>
+            <p className="text-right" style={{ marginBottom: 0 }}>
+              Last Updated {payload.latestUpdated.replace(/-/g, '.')}
             </p>
-            <p className="text-right" style={Style.sign}>
+            <p className="text-right" style={{ ...Style.sign, marginTop: 0 }}>
               {payload.sign}
             </p>
           </Col>

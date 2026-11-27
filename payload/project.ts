@@ -22,7 +22,7 @@ const project: IProject.Payload = {
           content:
             '실내 3D Reconstructed Mesh의 품질 개선 및 영역별 재질 교체를 지원하는 3D 에셋 생성·시뮬레이션 데모 개발',
           descriptions: [
-            { content: 'GT가 없는 환경에서 Train-free 방식의 Mesh Refinement 설계' },
+            { content: 'GT가 없는 환경에서 Training-free 방식의 Mesh Refinement 설계' },
             { content: 'Semantic Texture Baking 및 PBR 생성 API 연동 시뮬레이션 뷰어 개발' },
           ],
         },

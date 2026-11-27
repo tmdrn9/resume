@@ -8,13 +8,13 @@ const article: IArticle.Payload = {
       content:
         'Lee, S. L., Kang, M., Shim, B. S. and Hou, J. U.†, "Robust 3D Watermarking for NeRF-Induced Modality Shifts" ACM Transactions on Multimedia Computing, Communications and Applications, 2025.',
       href: 'https://dl.acm.org/doi/10.1145/3774650',
-      badges: ['JCR 7.7%', 'IF 6.0'],
+      badges: ['JCR 7%', 'IF 6.0'],
     },
     {
       content:
         'Lee, S. L., Kang, M. and Hou, J. U.†, "Localization of diffusion model-based inpainting through the inter-intra similarity of frequency features." Image and Vision Computing, 2024.',
       href: 'https://www.sciencedirect.com/science/article/abs/pii/S0262885624002427',
-      badges: ['JCR 13.4%', 'IF 4.2'],
+      badges: ['JCR 18.1%', 'IF 4.2'],
     },
     {
       content:

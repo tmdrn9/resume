@@ -62,7 +62,7 @@ const englishPayload: Payload = {
             endedAt: '2026-03',
             descriptions: [
               'Developed and introduced a generative AI–powered proof of concept for agentic 3D scene generation into production workflows.',
-              'Led AI development for an internal asset search platform, from model evaluation and pipeline development to API deployment.',
+              'Developed the AI pipeline and inference APIs for a natural-language search platform for video and 3D assets, and deployed it as an internal service.',
               'Developed an internal AI playground to evaluate solutions to content production challenges, select suitable open-source models, and make them available through APIs.',
               'Conducted monthly paper reviews and wrote an internal newsletter covering developments in AI.',
             ],
@@ -113,7 +113,7 @@ const englishPayload: Payload = {
             descriptions: [
               {
                 content:
-                  'Designed a mesh refinement pipeline that requires no additional training or ground-truth meshes.',
+                  'Designed a training-free mesh refinement pipeline that requires no ground-truth meshes.',
               },
               {
                 content:
@@ -256,7 +256,7 @@ const englishPayload: Payload = {
           },
           {
             content:
-              'Published the research in ACM Transactions on Multimedia Computing, Communications and Applications (TOMM; Q1, JCR top 7%).',
+              'Published the research in ACM Transactions on Multimedia Computing, Communications and Applications (TOMM; Q1, JCR 7%).',
           },
         ],
       },
@@ -280,7 +280,7 @@ const englishPayload: Payload = {
               },
             ],
           },
-          { content: 'Published the research in Image and Vision Computing (Q1, JCR top 18.1%).' },
+          { content: 'Published the research in Image and Vision Computing (Q1, JCR 18.1%).' },
         ],
       },
       {
@@ -344,14 +344,23 @@ const englishPayload: Payload = {
           {
             content:
               'Conceived and developed a service for 3D body shape analysis from full-body photos.',
+            descriptions: [
+              {
+                content: 'Proposed the project idea and collected and curated a test dataset.',
+              },
+              {
+                content:
+                  'Developed a body shape analysis pipeline using SAM3D-Body and the Gemini API.',
+              },
+              {
+                content:
+                  'Improved and validated body shape analysis performance through prompt engineering.',
+              },
+            ],
           },
-          { content: 'Collected and curated a test dataset to validate the service.' },
           {
             content:
-              'Built a pipeline combining SAM3D-Body for 3D human reconstruction with the Gemini API for body shape analysis.',
-          },
-          {
-            content: 'Deployed and operated the service in collaboration with partner companies.',
+              'Deployed the service and commercialized it in collaboration with partner companies.',
           },
         ],
       },
