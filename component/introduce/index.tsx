@@ -20,6 +20,7 @@ export const Introduce = {
 };
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
+  const paragraphOccurrences = new Map<string, number>();
   const latestUpdated = DateTime.fromFormat(
     payload.latestUpdated,
     Util.LUXON_DATE_FORMAT.YYYY_LL_DD,
@@ -41,19 +42,30 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
             </h2>
           </Col>
           <Col sm={12} md={9} className="split-right">
-            {payload.contents.map((content, index) => (
-              <p key={index.toString()}>
-                {content
-                  .split(/(ACM TOMM|Image and Vision Computing)/g)
-                  .map((part, partIndex) =>
-                    part === 'ACM TOMM' || part === 'Image and Vision Computing' ? (
-                      <i key={partIndex}>{part}</i>
-                    ) : (
-                      part
-                    ),
-                  )}
-              </p>
-            ))}
+            {payload.contents.map((content) => {
+              const occurrence = paragraphOccurrences.get(content) ?? 0;
+              const paragraphKey = `${content}-${occurrence}`;
+              const highlightedPartOccurrences = new Map<string, number>();
+              paragraphOccurrences.set(content, occurrence + 1);
+
+              return (
+                <p key={paragraphKey}>
+                  {content.split(/(ACM TOMM|Image and Vision Computing)/g).map((part) => {
+                    const isHighlighted =
+                      part === 'ACM TOMM' || part === 'Image and Vision Computing';
+
+                    if (!isHighlighted) {
+                      return part;
+                    }
+
+                    const partOccurrence = highlightedPartOccurrences.get(part) ?? 0;
+                    highlightedPartOccurrences.set(part, partOccurrence + 1);
+
+                    return <i key={`${part}-${partOccurrence}`}>{part}</i>;
+                  })}
+                </p>
+              );
+            })}
             <p className="text-right">
               <small>Latest Updated</small>{' '}
               <Badge color="secondary">
