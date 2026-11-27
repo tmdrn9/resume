@@ -42,7 +42,17 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
           </Col>
           <Col sm={12} md={9} className="split-right">
             {payload.contents.map((content, index) => (
-              <p key={index.toString()}>{content}</p>
+              <p key={index.toString()}>
+                {content
+                  .split(/(ACM TOMM|Image and Vision Computing)/g)
+                  .map((part, partIndex) =>
+                    part === 'ACM TOMM' || part === 'Image and Vision Computing' ? (
+                      <i key={partIndex}>{part}</i>
+                    ) : (
+                      part
+                    ),
+                  )}
+              </p>
             ))}
             <p className="text-right">
               <small>Latest Updated</small>{' '}

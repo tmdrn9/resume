@@ -18,8 +18,8 @@ const englishPayload: Payload = {
   introduce: {
     ...koreanPayload.introduce,
     contents: [
-      'I am a research engineer specializing in 3D vision and generative AI, with experience in NeRF research, 3D scene generation, indoor 3D reconstruction, and mesh refinement. I have coauthored six journal papers indexed in SCIE, including two first-author papers published in ACM TOMM and Image and Vision Computing.',
-      'My experience spans problem definition, dataset development, model design, training, evaluation, and deployment of internal services. I take ownership of unfamiliar problems and see them through to completion, with a focus on applying 3D vision to practical products and services.',
+      "I am a research engineer specializing in generative AI and computer vision. During my master's program, I researched GANs, diffusion models, and NeRF. My industry experience includes developing and applying AI technologies such as multimodal retrieval, agentic 3D scene generation, and 3D reconstruction. I have coauthored six SCIE-indexed journal papers, including two first-author papers published in ACM TOMM and Image and Vision Computing.",
+      'My experience spans the full AI development lifecycle, from problem definition and dataset development to model design, training, evaluation, system development, and service deployment. I take ownership of unfamiliar problems and see them through to completion, with a focus on applying emerging technologies to real-world challenges and translating research into practical solutions.',
     ],
   },
   experience: {
